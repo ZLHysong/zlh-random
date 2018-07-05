@@ -7,10 +7,10 @@
 
 ### Newly Assigned Tasks
 
-| Task                            | Assigned By | Completed? |
-|---------------------------------|-------------|------------|
-| Terms and Conditions button     | Mike Kelley | No         |
-| Confirmation email should match | Mike Kelley | No         |
+| Task                                        | Assigned By | Completed? |
+|---------------------------------------------|-------------|------------|
+| Terms and Conditions Button                 | Mike Kelley | No         |
+| Confirmation email should match `live` site | Mike Kelley | No         |
 
 ### Previous Tasks
 
@@ -19,3 +19,14 @@ None
 ### Completed Tasks
 
 None
+
+### Daily Notes
+
+#### Terms and Conditions Button 
+
+This link requires a JS file that does not play nice with the other files. No matter where I add it to the page, something else breaks.
+
+My suggestion is to change the link from whatever it is to a new Article or Popup, and copy the content from the live site into it.
+
+#### Confirmation email should match `live` site
+
