@@ -48,3 +48,10 @@ Both emails contain LKW content, but the 2018 one does differ. We will need to f
 
 The OSE Membership emails are only used when working with a paid membership.
 
+## 2018-07-10
+
+### Games from DB
+
+- Get a list of Game IDs from Config File for from Database
+- Make a list of all games that are missing Icons and Showcase Images
+- Create missing Showcase Images
