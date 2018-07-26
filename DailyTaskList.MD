@@ -73,7 +73,7 @@ The OSE Membership emails are only used when working with a paid membership.
 | 103  | sheepescape            | Sheep Escape                                  | katalina     | academy_math          | Y    | Y        |      |
 | 49   | flashcards2            | Flashcards for Multiplication and Subtraction | katalina     | academy_math          | Y    | N        | Y    |
 | 51   | flashcards             | Flashcards for Addition and Subtraction       | katalina     | academy_math          | Y    | N        | Y    |
-| 13   | sumsof15               | Sums of 15                                    | katalina     | academy_math          | Y    | Y        |      |
+| 13   | sumsof15               | Sums of 15                                    | katalina     | academy_math          | N    | N        |      |
 | 83   | bowlingali             | Bowling Ali                                   | katalina     | academy_sports        | Y    | Y        |      |
 | 79   | darerace               | DARE Speed Limit                              | katalina     | academy_sports        | Y    | Y        |      |
 | 67   | alihoops               | Ali Hoops                                     | katalina     | academy_sports        | Y    | Y        |      |
