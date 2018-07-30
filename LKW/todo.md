@@ -1,22 +1,23 @@
 # 2018-07-30
 
-- Flip (horizontally) the shape of the background box for the following "featured items" boxes:
-    - 100+ Games
-    - Cruise Ship Adventure
-    - LK4 Rules
-- Add/move video icon to top right or top left corner for the LK4 Rules and How to Play featured items.
-- Make sure the margins match the live site.
-- New bottom footer links
-    - About Us 
-    - Contact Us 
-    - FAQs 
-    - Terms & Conditions 
-    - DARE 
-    - Schools/Teachers 
-    - Character Education 
-    - Fundraising 
-    - Store 
+- ~~Flip (horizontally) the shape of the background box for the following "featured items" boxes:~~
+    - ~~100+ Games~~
+    - ~~Cruise Ship Adventure~~
+    - ~~LK4 Rules~~
+- ~~Add/move video icon to top right or top left corner for the LK4 Rules and How to Play featured items.~~
+- ~~Make sure the margins match the live site.~~
+- ~~New bottom footer links~~
+    - ~~About Us~~
+    - ~~Contact Us~~
+    - ~~FAQs~~
+    - ~~Terms & Conditions~~
+    - ~~DARE~~
+    - ~~Schools/Teachers~~
+    - ~~Character Education~~
+    - ~~Fundraising~~
+    - ~~Store~~
 
+---
 
 # 2018-07-26
 
