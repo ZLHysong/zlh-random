@@ -3,9 +3,9 @@
 - ~~Change colors for lower boxes by using only colors from top.~~
 - ~~Shrink Free to Play etc banners to about 75% of current size~~
 - ~~Move select arrows in from the right so there is not as much of a gap~~
-- move `Help / FAQs` and `Privacy Policy` to Top Menu with `Teachers` / `Parents` / ` Membership`, `Privacy Policy` first
-    - <a href="/privacy-policy">PRIVACY POLICY</a>
-    - <a href="/faqs">HELP/FAQS</a>
+- ~~move `Help / FAQs` and `Privacy Policy` to Top Menu with `Teachers` / `Parents` / ` Membership`, `Privacy Policy` first~~
+    - ~~<a href="/privacy-policy">PRIVACY POLICY</a>~~
+    - ~~<a href="/faqs">HELP/FAQS</a>~~
 # Footer
 - ~~To match style of `https://luckykatworld.com/store/`~~
     - ~~Plain Arial Text and separated by `|` (pipe)~~
