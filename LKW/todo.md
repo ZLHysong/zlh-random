@@ -1,3 +1,11 @@
+# 2018-08-01
+
+## Magento Notes
+
+### Currently trying to migrate from 1.9.3.4 to 2.1.7
+
+`sudo bin/magento migrate:settings vendor/magento/data-migration-tool/etc/ce-to-ce/1.9.3.3/config.xml`
+
 # 2018-07-30
 
 - ~~Flip (horizontally) the shape of the background box for the following "featured items" boxes:~~
