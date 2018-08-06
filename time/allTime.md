@@ -24,12 +24,32 @@ Time  | ID  | Noun   | Task
 Time  | ID  | Noun   | Task
 ---   | --- | ---    | ---
 9:45  |     | Start  | Day
-9:45  |     | NOTE   | - Sent Mike the link on how to regenerate the CSS Assets for Magento
-9:45  |     | Start  | - Working on the `liveHelp` Module
-10:00 |     | Start  | - - Reinstalling `liveHelp` extension
-10:15 |     | Finish | - - Reinstalling `liveHelp` extension
-10:15 |     | Start  | - - Setting up `liveHelp` extension
-11:45 |     | Finish | - - Setting up `liveHelp` extension
-11:45 |     | Start  | - - Setting up `liveHelp` Images and CSS
-12:50 |     | Finish | - - Setting up `liveHelp` Images and CSS
-1:00  |     | Finish | - Working on the `liveHelp` Module
+9:45  |     | NOTE   | Sent Mike the link on how to regenerate the CSS Assets for Magento
+9:45  |     | Start  | Working on the `liveHelp` Module
+10:00 |     | Start  | Reinstalling `liveHelp` extension
+10:15 |     | Finish | Reinstalling `liveHelp` extension
+10:15 |     | Start  | Setting up `liveHelp` extension
+11:45 |     | Finish | Setting up `liveHelp` extension
+11:45 |     | Start  | Setting up `liveHelp` Images and CSS
+12:50 |     | Finish | Setting up `liveHelp` Images and CSS
+1:00  |     | Finish | Working on the `liveHelp` Module
+5:45  |     | Finish | Working on Email Templates
+5:45  |     | Finish | Day
+
+## 2018-08-03
+
+Time  | ID  | Noun   | Task
+---   | --- | ---    | ---
+9:30  |     | Start  | Day
+9:30  |     | Start  | Fixing Email Templates
+3:00  |     | Finish | Fixing Email Templates
+3:30  |     | Start  | Adjusting Magento Store Template
+5:30  |     | Finish | Adjusting Magento Store Template
+5:30  |     | Finish | Day
+
+## 2018-08-06
+
+Time  | ID  | Noun   | Task
+---   | --- | ---    | ---
+10:00 |     | Start  | Day
+10:00 |     | Start  | Magento Store Theme
