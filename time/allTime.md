@@ -2,7 +2,7 @@
 
 > This file should be used as an example log for the terminal time tracker
 
-## 2018-08-01
+## 2018-08-01 - Total Time: 8:00
 
 Time  | ID  | Noun   | Task
 ---   | --- | ---    | ---
@@ -19,7 +19,7 @@ Time  | ID  | Noun   | Task
 6:10  |     | Finish | Adding Music controls to Home Page
 6:10  |     | Finish | Day
 
-## 2018-08-02
+## 2018-08-02 - Total Time: 8:00
 
 Time  | ID  | Noun   | Task
 ---   | --- | ---    | ---
@@ -36,7 +36,7 @@ Time  | ID  | Noun   | Task
 5:45  |     | Finish | Working on Email Templates
 5:45  |     | Finish | Day
 
-## 2018-08-03
+## 2018-08-03 - Total Time: 8:00
 
 Time  | ID  | Noun   | Task
 ---   | --- | ---    | ---
@@ -47,9 +47,22 @@ Time  | ID  | Noun   | Task
 5:30  |     | Finish | Adjusting Magento Store Template
 5:30  |     | Finish | Day
 
-## 2018-08-06
+## 2018-08-06 - Total Time: 8:00
 
 Time  | ID  | Noun   | Task
 ---   | --- | ---    | ---
 10:00 |     | Start  | Day
 10:00 |     | Start  | Magento Store Theme
+6:00  |     | Finish | Magento Store Theme
+6:00  |     | Finish | Day
+
+## 2018-08-07 - Total Time: 7:30
+
+Time  | ID  | Noun   | Task
+---   | --- | ---    | ---
+9:30  |     | Start  | Day
+9:30  |     | Start  | Magento Store Theme
+2:00  |     | Finish | Magento Store Theme
+2:00  |     | Start  | Magento Products
+5:00  |     | Finish | Magento Products
+5:00  |     | Finish | Day
