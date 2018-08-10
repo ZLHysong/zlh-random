@@ -12,6 +12,7 @@ Date        |   Time
 2018-08-06  |   8:00
 2018-08-07  |   7:30
 2018-08-08  |   8:30
+2018-08-09  |   8:00
 
 ## 2018-08-01 - Total Time: 8:00
 
@@ -88,3 +89,12 @@ Time  |  Noun   | Task
 02:45 |  Start  | `Magento` Store CSS and XML
 07:30 |  Finish | `Magento` Store CSS and XML
 07:30 |  Finish | Day
+
+## 2018-08-09 - Total Time: 8:00
+
+> This day was very sporadic and had a lot of 'breaks', but is counted as 8 hours
+
+Time  |  Noun   | Task
+---   |  ---    | ---
+11:00 |  Start  | Day
+09:00 |  Finish | Day
