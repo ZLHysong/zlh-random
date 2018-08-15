@@ -1,6 +1,5 @@
 *.pdf
-**/LKW/temp/
-**/LKW/archive/
+**/LKW/
 zlhysong-access-token.txt
 
 **/bitvise
