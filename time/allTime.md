@@ -97,4 +97,43 @@ Time  |  Noun   | Task
 Time  |  Noun   | Task
 ---   |  ---    | ---
 11:00 |  Start  | Day
+11:00 |  Start  | Working on LKI Website / ShopGoodCharacter for Launch
+09:00 |  Finish | Working on LKI Website / ShopGoodCharacter for Launch
 09:00 |  Finish | Day
+
+## 2018-08-10 - Total Time: 8:00
+
+Time  |  Noun   | Task
+---   |  ---    | ---
+10:00 |  Start  | Day
+10:00 |  Start  | Working on LKI Website for Launch
+06:00 |  Finish | Working on LKI Website for Launch
+06:00 |  Finish | Day
+
+## 2018-08-13 - Total Time: 8:00
+
+Time  |  Noun   | Task
+---   |  ---    | ---
+10:00 |  Start  | Day
+10:00 |  Start  | Working on LKI Website for Launch
+06:00 |  Finish | Working on LKI Website for Launch
+06:00 |  Finish | Day
+
+## 2018-08-14 - Total Time: 9:00
+
+Time  |  Noun   | Task
+---   |  ---    | ---
+10:00 |  Start  | Day
+10:00 |  Start  | Working on LKI Website for Launch
+07:00 |  Finish | Working on LKI Website for Launch
+07:00 |  Finish | Day
+
+## 2018-08-15 - Total Time: 8:00
+
+Time  |  Noun   | Task
+---   |  ---    | ---
+09:30 |  Start  | Day
+09:30 |  Start  | Timesheet
+10:00 |  Finish | Timesheet
+
+# Pay Period 2018-08-16 to 2018-09-01
