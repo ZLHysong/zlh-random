@@ -128,7 +128,7 @@ Time  |  Noun   | Task
 07:00 |  Finish | Working on LKI Website for Launch
 07:00 |  Finish | Day
 
-## 2018-08-15 - Total Time: 8:00
+## 2018-08-15 - Total Time: 12:00
 
 Time  |  Noun   | Task
 ---   |  ---    | ---
@@ -140,3 +140,10 @@ Time  |  Noun   | Task
 10:00 |  Finish | Day
 
 # Pay Period 2018-08-16 to 2018-09-01
+
+## 2018-08-15 - Total Time: 
+
+Time  |  Noun   | Task
+---   |  ---    | ---
+09:30 |  Start  | Day
+09:30 |  Start  | Working on LKI Site for Launch
