@@ -135,5 +135,8 @@ Time  |  Noun   | Task
 09:30 |  Start  | Day
 09:30 |  Start  | Timesheet
 10:00 |  Finish | Timesheet
+10:00 |  Start  | Working on LKI Site for Launch
+10:00 |  Finish | Working on LKI Site for Launch
+10:00 |  Finish | Day
 
 # Pay Period 2018-08-16 to 2018-09-01
