@@ -141,9 +141,47 @@ Time  |  Noun   | Task
 
 # Pay Period 2018-08-16 to 2018-09-01
 
-## 2018-08-15 - Total Time: 
+## 2018-08-16 - Total Time: 8:00
 
 Time  |  Noun   | Task
 ---   |  ---    | ---
 09:30 |  Start  | Day
 09:30 |  Start  | Working on LKI Site for Launch
+05:30 |  Finish | Working on LKI Site for Launch
+05:30 |  Finish | Day
+
+## 2018-08-17 - Total Time: 9:00
+
+Time  |  Noun   | Task
+---   |  ---    | ---
+10:30 |  Start  | Day
+10:30 |  Start  | Working on LKI Site for Launch
+07:00 |  Finish | Working on LKI Site for Launch
+07:00 |  Finish | Day
+
+## 2018-08-20 - Total Time: 7:00
+
+Time  |  Noun   | Task
+---   |  ---    | ---
+09:30 |  Start  | Day
+09:30 |  Start  | Installing ActiveHelper
+11:00 |  Finish | Installing ActiveHelper
+11:00 |  Start  | Make and start list of missing / broken links; Start Site Mapper
+06:30 |  Finish | Make and start list of missing / broken links; Finish Site Mapper
+06:30 |  Finish | Day
+
+## 2018-08-21 - Total Time: 8:00
+
+Time  |  Noun   | Task
+---   |  ---    | ---
+10:30 |  Start  | Day
+10:30 |  Start  | Work on Kids Site; Add new articles, images, etc.
+06:30 |  Finish | Work on Kids Site; Add new articles, images, etc.
+06:30 |  Finish | Day
+
+## 2018-08-22 - Total Time: 
+
+Time  |  Noun   | Task
+---   |  ---    | ---
+09:30 |  Start  | Day
+09:30 |  Start  | Tammy's List
