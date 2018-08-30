@@ -179,9 +179,52 @@ Time  |  Noun   | Task
 06:30 |  Finish | Work on Kids Site; Add new articles, images, etc.
 06:30 |  Finish | Day
 
-## 2018-08-22 - Total Time: 
+## 2018-08-22 - Total Time: 12:00
 
 Time  |  Noun   | Task
 ---   |  ---    | ---
 09:30 |  Start  | Day
-09:30 |  Start  | Tammy's List
+09:30 |  Start  | Pre-Launch Sprint
+09:30 |  Finish | Pre-Launch Sprint
+09:30 |  Finish | Day
+
+## 2018-08-23 - Total Time: 12:00
+
+Time  |  Noun   | Task
+---   |  ---    | ---
+09:30 |  Start  | Day
+09:30 |  Start  | Pre-Launch Sprint
+09:30 |  Finish | Pre-Launch Sprint
+09:30 |  Finish | Day
+
+## 2018-08-24 - Total Time: 9:00
+
+Time  |  Noun   | Task
+---   |  ---    | ---
+09:30 |  Start  | Day
+09:30 |  Start  | Pre-Launch Sprint
+06:30 |  Finish | Pre-Launch Sprint
+06:30 |  Finish | Day
+
+## 2018-08-27 - Total Time: 8:00
+
+Time  |  Noun   | Task
+---   |  ---    | ---
+09:30 |  Start  | Day
+09:30 |  Start  | Assist Mike, Misc Tasks
+05:30 |  Finish | Assist Mike, Misc Tasks
+05:30 |  Finish | Day
+
+## 2018-08-28 - Total Time: 9:30
+
+Time  |  Noun   | Task
+---   |  ---    | ---
+10:00 |  Start  | Day
+07:30 |  Finish | Day
+
+## 2018-08-29 - Total Time: 11:00
+
+Time  |  Noun   | Task
+---   |  ---    | ---
+09:30 |  Start  | Day
+08:30 |  Start  | Day
