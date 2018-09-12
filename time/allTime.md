@@ -228,3 +228,65 @@ Time  |  Noun   | Task
 ---   |  ---    | ---
 09:30 |  Start  | Day
 08:30 |  Start  | Day
+
+## 2018-08-30 - Total Time: 6:00
+
+Time  |  Noun   | Task
+---   |  ---    | ---
+09:30 |  Start  | Day
+03:30 |  Start  | Day
+
+## 2018-08-31 - Total Time: 7:00
+
+Time  |  Noun   | Task
+---   |  ---    | ---
+09:30 |  Start  | Day
+04:30 |  Start  | Day
+
+# Pay Period 2018-09-01 to 2018-09-15
+
+## 2018-09-03 - Total Time: 0:00
+
+Unpaid Holiday
+
+## 2018-09-04 - Total Time: 8:00
+
+| Tasks
+| ---
+| People could still sign up on LKI; Resolved this by completely disabling registration in the admin panel
+| Added `x` to Parent Gate
+| Started custom OSE Pages and PureFlix Landing Pages
+| Deleted unneeded accounts
+| Adjusted LKW Footer
+| Started looking into Bounced Emails
+
+## 2018-09-05 - Total Time: 4:00
+
+| Tasks
+| ---
+| Adjusted PureFlix Landing Pages
+| Adjusted LKW Footer
+
+## 2018-09-06 - Total Time: 8:00
+
+| Tasks
+| ---
+| Started downloading the server files to start on GitHub
+| Looked into the PhotoBooth
+| Kept working on the LKW Registration Backdoor
+
+## 2018-09-07 - Total Time: 8:00
+
+| Tasks
+| ---
+| Continued work on the Photobooth
+| Looked into getting "external" links to be viewed as "internal" ones; failed
+| Worked on Landing Pages and Custom OSE Pages with Tammy
+
+## 2018-09-10 - Total Time: 8:00
+
+| Tasks
+| ---
+| OSE Forms - Select the specific items we want
+| OSE Forms - Apply coupon codes
+| OSE Forms - Show only one box when selecting "Buy Now"
