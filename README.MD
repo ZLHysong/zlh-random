@@ -25,6 +25,7 @@
             - [Deleting Tags](#deleting-tags)
 
 <!-- /TOC -->
+
 ## PHP
 
 When checking php errors, we can add `ini_set('display_errors', '1');` to force errors to show.
@@ -34,7 +35,7 @@ When checking php errors, we can add `ini_set('display_errors', '1');` to force 
 ### Resources 
 
 > NOTE: Quotes and code below taken from [Pro Git Book (Free)](https://git-scm.com/book/en/v2)
-> 
+ 
 ### `.gitignore`
 
 > A repository might have a single .gitignore file in its root directory, which applies recursively to the entire repository. However, it is also possible to have additional .gitignore files in subdirectories. The rules in these nested .gitignore files apply only to the files under the directory where they are located. (The Linux kernel source repository has 206 .gitignore files.)
