@@ -1,0 +1,719 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>MarkdownPad Document</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<style type="text/css">
+/* GitHub stylesheet for MarkdownPad (http://markdownpad.com) */
+/* Author: Nicolas Hery - http://nicolashery.com */
+/* Version: b13fe65ca28d2e568c6ed5d7f06581183df8f2ff */
+/* Source: https://github.com/nicolahery/markdownpad-github */
+
+/* RESET
+=============================================================================*/
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+/* BODY
+=============================================================================*/
+
+body {
+  font-family: Helvetica, arial, freesans, clean, sans-serif;
+  font-size: 14px;
+  line-height: 1.6;
+  color: #333;
+  background-color: #fff;
+  padding: 20px;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+body>*:first-child {
+  margin-top: 0 !important;
+}
+
+body>*:last-child {
+  margin-bottom: 0 !important;
+}
+
+/* BLOCKS
+=============================================================================*/
+
+p, blockquote, ul, ol, dl, table, pre {
+  margin: 15px 0;
+}
+
+/* HEADERS
+=============================================================================*/
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 20px 0 10px;
+  padding: 0;
+  font-weight: bold;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1 tt, h1 code, h2 tt, h2 code, h3 tt, h3 code, h4 tt, h4 code, h5 tt, h5 code, h6 tt, h6 code {
+  font-size: inherit;
+}
+
+h1 {
+  font-size: 28px;
+  color: #000;
+}
+
+h2 {
+  font-size: 24px;
+  border-bottom: 1px solid #ccc;
+  color: #000;
+}
+
+h3 {
+  font-size: 18px;
+}
+
+h4 {
+  font-size: 16px;
+}
+
+h5 {
+  font-size: 14px;
+}
+
+h6 {
+  color: #777;
+  font-size: 14px;
+}
+
+body>h2:first-child, body>h1:first-child, body>h1:first-child+h2, body>h3:first-child, body>h4:first-child, body>h5:first-child, body>h6:first-child {
+  margin-top: 0;
+  padding-top: 0;
+}
+
+a:first-child h1, a:first-child h2, a:first-child h3, a:first-child h4, a:first-child h5, a:first-child h6 {
+  margin-top: 0;
+  padding-top: 0;
+}
+
+h1+p, h2+p, h3+p, h4+p, h5+p, h6+p {
+  margin-top: 10px;
+}
+
+/* LINKS
+=============================================================================*/
+
+a {
+  color: #4183C4;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* LISTS
+=============================================================================*/
+
+ul, ol {
+  padding-left: 30px;
+}
+
+ul li > :first-child, 
+ol li > :first-child, 
+ul li ul:first-of-type, 
+ol li ol:first-of-type, 
+ul li ol:first-of-type, 
+ol li ul:first-of-type {
+  margin-top: 0px;
+}
+
+ul ul, ul ol, ol ol, ol ul {
+  margin-bottom: 0;
+}
+
+dl {
+  padding: 0;
+}
+
+dl dt {
+  font-size: 14px;
+  font-weight: bold;
+  font-style: italic;
+  padding: 0;
+  margin: 15px 0 5px;
+}
+
+dl dt:first-child {
+  padding: 0;
+}
+
+dl dt>:first-child {
+  margin-top: 0px;
+}
+
+dl dt>:last-child {
+  margin-bottom: 0px;
+}
+
+dl dd {
+  margin: 0 0 15px;
+  padding: 0 15px;
+}
+
+dl dd>:first-child {
+  margin-top: 0px;
+}
+
+dl dd>:last-child {
+  margin-bottom: 0px;
+}
+
+/* CODE
+=============================================================================*/
+
+pre, code, tt {
+  font-size: 12px;
+  font-family: Consolas, "Liberation Mono", Courier, monospace;
+}
+
+code, tt {
+  margin: 0 0px;
+  padding: 0px 0px;
+  white-space: nowrap;
+  border: 1px solid #eaeaea;
+  background-color: #f8f8f8;
+  border-radius: 3px;
+}
+
+pre>code {
+  margin: 0;
+  padding: 0;
+  white-space: pre;
+  border: none;
+  background: transparent;
+}
+
+pre {
+  background-color: #f8f8f8;
+  border: 1px solid #ccc;
+  font-size: 13px;
+  line-height: 19px;
+  overflow: auto;
+  padding: 6px 10px;
+  border-radius: 3px;
+}
+
+pre code, pre tt {
+  background-color: transparent;
+  border: none;
+}
+
+kbd {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    background-color: #DDDDDD;
+    background-image: linear-gradient(#F1F1F1, #DDDDDD);
+    background-repeat: repeat-x;
+    border-color: #DDDDDD #CCCCCC #CCCCCC #DDDDDD;
+    border-image: none;
+    border-radius: 2px 2px 2px 2px;
+    border-style: solid;
+    border-width: 1px;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    line-height: 10px;
+    padding: 1px 4px;
+}
+
+/* QUOTES
+=============================================================================*/
+
+blockquote {
+  border-left: 4px solid #DDD;
+  padding: 0 15px;
+  color: #777;
+}
+
+blockquote>:first-child {
+  margin-top: 0px;
+}
+
+blockquote>:last-child {
+  margin-bottom: 0px;
+}
+
+/* HORIZONTAL RULES
+=============================================================================*/
+
+hr {
+  clear: both;
+  margin: 15px 0;
+  height: 0px;
+  overflow: hidden;
+  border: none;
+  background: transparent;
+  border-bottom: 4px solid #ddd;
+  padding: 0;
+}
+
+/* TABLES
+=============================================================================*/
+
+table th {
+  font-weight: bold;
+}
+
+table th, table td {
+  border: 1px solid #ccc;
+  padding: 6px 13px;
+}
+
+table tr {
+  border-top: 1px solid #ccc;
+  background-color: #fff;
+}
+
+table tr:nth-child(2n) {
+  background-color: #f8f8f8;
+}
+
+/* IMAGES
+=============================================================================*/
+
+img {
+  max-width: 100%
+}
+</style>
+<style type="text/css">
+.highlight  { background: #ffffff; }
+.highlight .c { color: #999988; font-style: italic } /* Comment */
+.highlight .err { color: #a61717; background-color: #e3d2d2 } /* Error */
+.highlight .k { font-weight: bold } /* Keyword */
+.highlight .o { font-weight: bold } /* Operator */
+.highlight .cm { color: #999988; font-style: italic } /* Comment.Multiline */
+.highlight .cp { color: #999999; font-weight: bold } /* Comment.Preproc */
+.highlight .c1 { color: #999988; font-style: italic } /* Comment.Single */
+.highlight .cs { color: #999999; font-weight: bold; font-style: italic } /* Comment.Special */
+.highlight .gd { color: #000000; background-color: #ffdddd } /* Generic.Deleted */
+.highlight .gd .x { color: #000000; background-color: #ffaaaa } /* Generic.Deleted.Specific */
+.highlight .ge { font-style: italic } /* Generic.Emph */
+.highlight .gr { color: #aa0000 } /* Generic.Error */
+.highlight .gh { color: #999999 } /* Generic.Heading */
+.highlight .gi { color: #000000; background-color: #ddffdd } /* Generic.Inserted */
+.highlight .gi .x { color: #000000; background-color: #aaffaa } /* Generic.Inserted.Specific */
+.highlight .go { color: #888888 } /* Generic.Output */
+.highlight .gp { color: #555555 } /* Generic.Prompt */
+.highlight .gs { font-weight: bold } /* Generic.Strong */
+.highlight .gu { color: #aaaaaa } /* Generic.Subheading */
+.highlight .gt { color: #aa0000 } /* Generic.Traceback */
+.highlight .kc { font-weight: bold } /* Keyword.Constant */
+.highlight .kd { font-weight: bold } /* Keyword.Declaration */
+.highlight .kp { font-weight: bold } /* Keyword.Pseudo */
+.highlight .kr { font-weight: bold } /* Keyword.Reserved */
+.highlight .kt { color: #445588; font-weight: bold } /* Keyword.Type */
+.highlight .m { color: #009999 } /* Literal.Number */
+.highlight .s { color: #d14 } /* Literal.String */
+.highlight .na { color: #008080 } /* Name.Attribute */
+.highlight .nb { color: #0086B3 } /* Name.Builtin */
+.highlight .nc { color: #445588; font-weight: bold } /* Name.Class */
+.highlight .no { color: #008080 } /* Name.Constant */
+.highlight .ni { color: #800080 } /* Name.Entity */
+.highlight .ne { color: #990000; font-weight: bold } /* Name.Exception */
+.highlight .nf { color: #990000; font-weight: bold } /* Name.Function */
+.highlight .nn { color: #555555 } /* Name.Namespace */
+.highlight .nt { color: #000080 } /* Name.Tag */
+.highlight .nv { color: #008080 } /* Name.Variable */
+.highlight .ow { font-weight: bold } /* Operator.Word */
+.highlight .w { color: #bbbbbb } /* Text.Whitespace */
+.highlight .mf { color: #009999 } /* Literal.Number.Float */
+.highlight .mh { color: #009999 } /* Literal.Number.Hex */
+.highlight .mi { color: #009999 } /* Literal.Number.Integer */
+.highlight .mo { color: #009999 } /* Literal.Number.Oct */
+.highlight .sb { color: #d14 } /* Literal.String.Backtick */
+.highlight .sc { color: #d14 } /* Literal.String.Char */
+.highlight .sd { color: #d14 } /* Literal.String.Doc */
+.highlight .s2 { color: #d14 } /* Literal.String.Double */
+.highlight .se { color: #d14 } /* Literal.String.Escape */
+.highlight .sh { color: #d14 } /* Literal.String.Heredoc */
+.highlight .si { color: #d14 } /* Literal.String.Interpol */
+.highlight .sx { color: #d14 } /* Literal.String.Other */
+.highlight .sr { color: #009926 } /* Literal.String.Regex */
+.highlight .s1 { color: #d14 } /* Literal.String.Single */
+.highlight .ss { color: #990073 } /* Literal.String.Symbol */
+.highlight .bp { color: #999999 } /* Name.Builtin.Pseudo */
+.highlight .vc { color: #008080 } /* Name.Variable.Class */
+.highlight .vg { color: #008080 } /* Name.Variable.Global */
+.highlight .vi { color: #008080 } /* Name.Variable.Instance */
+.highlight .il { color: #009999 } /* Literal.Number.Integer.Long */
+.pl-c {
+    color: #969896;
+}
+
+.pl-c1,.pl-mdh,.pl-mm,.pl-mp,.pl-mr,.pl-s1 .pl-v,.pl-s3,.pl-sc,.pl-sv {
+    color: #0086b3;
+}
+
+.pl-e,.pl-en {
+    color: #795da3;
+}
+
+.pl-s1 .pl-s2,.pl-smi,.pl-smp,.pl-stj,.pl-vo,.pl-vpf {
+    color: #333;
+}
+
+.pl-ent {
+    color: #63a35c;
+}
+
+.pl-k,.pl-s,.pl-st {
+    color: #a71d5d;
+}
+
+.pl-pds,.pl-s1,.pl-s1 .pl-pse .pl-s2,.pl-sr,.pl-sr .pl-cce,.pl-sr .pl-sra,.pl-sr .pl-sre,.pl-src,.pl-v {
+    color: #df5000;
+}
+
+.pl-id {
+    color: #b52a1d;
+}
+
+.pl-ii {
+    background-color: #b52a1d;
+    color: #f8f8f8;
+}
+
+.pl-sr .pl-cce {
+    color: #63a35c;
+    font-weight: bold;
+}
+
+.pl-ml {
+    color: #693a17;
+}
+
+.pl-mh,.pl-mh .pl-en,.pl-ms {
+    color: #1d3e81;
+    font-weight: bold;
+}
+
+.pl-mq {
+    color: #008080;
+}
+
+.pl-mi {
+    color: #333;
+    font-style: italic;
+}
+
+.pl-mb {
+    color: #333;
+    font-weight: bold;
+}
+
+.pl-md,.pl-mdhf {
+    background-color: #ffecec;
+    color: #bd2c00;
+}
+
+.pl-mdht,.pl-mi1 {
+    background-color: #eaffea;
+    color: #55a532;
+}
+
+.pl-mdr {
+    color: #795da3;
+    font-weight: bold;
+}
+
+.pl-mo {
+    color: #1d3e81;
+}
+.task-list {
+padding-left:10px;
+margin-bottom:0;
+}
+
+.task-list li {
+    margin-left: 20px;
+}
+
+.task-list-item {
+list-style-type:none;
+padding-left:10px;
+}
+
+.task-list-item label {
+font-weight:400;
+}
+
+.task-list-item.enabled label {
+cursor:pointer;
+}
+
+.task-list-item+.task-list-item {
+margin-top:3px;
+}
+
+.task-list-item-checkbox {
+display:inline-block;
+margin-left:-20px;
+margin-right:3px;
+vertical-align:1px;
+}
+</style>
+</head>
+<body>
+<h2 id="section-4-getting-started-with-css-text-rules">Section 4:  Getting Started with CSS Text Rules</h2>
+<blockquote>
+<p>Note:  Framework Television offers a full certification course in CSS.  The included material with in the HMTL5 Authoring program is designed to give you enough CSS knowledge to start working with the language, but is not designed to be comprehensive.</p>
+</blockquote>
+<p>CSS (Cascading Style Sheet language) provides the design layer to web based, and much mobile content.  It is a mark up language that allows you, as the developer, to set rules governing how content should appear on the users&#39; screens.</p>
+<p>This has become more challenging of late because we no longer live in a world where screen size, resolution, bandwidth and other factors are predictable.  People viewing your content may range from someone in an office with a fiber internet connection and a giant screen, to someone in subsaharan Africa with a cell phone, slow connection and tiny screen.</p>
+<p>Fortunately CSS has both the power and the flexibility to produce styles that look great across the range of devices in use on today&#39;s internet.</p>
+<blockquote>
+<p>Understanding the &quot;mechanicals&quot; of CSS are just one aspect of producing digital content.  You also have to understand the rules of digital design and usability.  Designing interfaces that are usable and look good is a separate, related field to web development known as UX (User eXperience).  You my find UX is a good direction to move in if you want to spend more time creating designs than writing code.<br>You won&#39;t escape the coding entirely, however, as today, almost all UX designers have a firm grip of HTML5 and CSS.</p>
+</blockquote>
+<p>After completing this section you will:</p>
+<ul>
+<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled> Understand the basic CSS syntax.</li><li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled> Use External and Internal Style Sheets</li><li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled> Understand Fundamental Typographical CSS Rules</li><li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled> Demonstrate CSS Override</li></ul>
+<h2 id="understand-basic-css-syntax">Understand Basic CSS Syntax</h2>
+<p>CSS uses a different syntax than HTML. It is, however, designed to work easily with HTML. </p>
+<p>CSS statements essentially have two parts:  The selector and the style rule. The selector determines which elements to apply the CSS to and the style rule determines which styles to apply.  Here&#39;s a typical block of CSS code:</p>
+<pre><code>p    {
+        color: #121212;
+        font-size: 14pt;
+    }
+</code></pre><p>The selector in this case is <code>p</code>.  This means that any <code>&lt;p&gt;</code> tags would be selected and styled.  (There are numerous other types of selectors that we&#39;ll get in to later in the course).  </p>
+<p>The style rules should be somewhat understandable just from reading them.  In the case above, we&#39;re applying two style rules to the <code>&lt;p&gt;</code> tags.  The first rule applies a deep gray color to the text.  The second sets the size of the text to 14 points. Note that each CSS style rule is terminated by a semicolon.</p>
+<p>Let&#39;s take a look at a second example:</p>
+<pre><code>h3    {
+    text-decoration: underline;
+    }
+</code></pre><p>This rule would apply an underline to any h3 tags appearing in the document.</p>
+<h2 id="use-inline-internal-and-external-style-sheets">Use Inline, Internal  and External Style Sheets</h2>
+<blockquote>
+<p>The terms &quot;CSS&quot; and stylesheet are being used interchangeably throughout this section. </p>
+</blockquote>
+<p>As is true with many aspects of digital development, there are several methods you can use to apply CSS code. Let&#39;s look at the three primary methods individually:</p>
+<h3 id="inline-css">Inline CSS</h3>
+<p>Inline CSS is applied via the HTML <code>&lt;style&gt;</code> tag. This method is commonly used with HTML emails because an external style sheet is not possible.</p>
+<p>Internal CSS looks like this:</p>
+<pre><code>&lt;h1 style=&quot;color: red; font-size: 24pt;&quot;&gt;I&#39;m Stylin&#39;&lt;/h1&gt;
+</code></pre><p>The <code>&lt;h1&gt;</code> element here would appear red in a 24 pt size. The result would look like this:<br><img src="https://s3.amazonaws.com/coursewareframework/html5authoring/Screen+Shot+2018-10-07+at+7.46.56+AM.png" alt="Internal Style Sheet Applied"><br>Outside of use with HTML emails, the use of inline styles is not considered a best practice.  Well formed CSS should be able to be easily:</p>
+<ul>
+<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled> Edited within a document.  With inline CSS each individual instance of CSS must be located and edited.</li><li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled> Applied to multiple elements on multiple pages lending to style consistency across a site.</li></ul>
+<h3 id="internal-style-sheets">Internal Style Sheets</h3>
+<p>Internal stylesheets appear in the <code>&lt;head&gt;</code> section of an HTML document. The CSS itself will appear within a <code>&lt;style&gt;</code> element.  This is advantageous because all the CSS is in one location and easily editable.  Perhaps, more importantly, CSS style rules can be applied to multiple elements, unlike in the case of inline CSS.  Here&#39;s an example of an internal style sheet.</p>
+<pre><code>&lt;head&gt;
+&lt;title&gt;Example Internal CSS&lt;/title&gt;
+&lt;style&gt;
+    h1 {
+        font-size: 28pt;
+        font-family: Arial;
+        font-weight: bold;
+        color: #121212;
+        }
+    h2  {
+        font-family: 20px;
+        font-family: Arial;
+        font-weight: normal;
+        }
+&lt;/style&gt;
+&lt;/head&gt;
+</code></pre><p>In this brief style sheet we&#39;ve created style rules that apply to <code>&lt;h1&gt;</code> and <code>&lt;h2&gt;</code> tags within our document.</p>
+<h3 id="external-style-sheets">External Style Sheets</h3>
+<p>External style sheets appear in their own file and are attached to the HTML document using the <code>&lt;link&gt;</code> tag. </p>
+<p>External Style Sheets are often the preferred method of placing CSS because the document can be applied to multiple HTML files giving related documents consistent styling and allowing style changes across multiple pages to be completed with a single edit.</p>
+<p>An external style sheet should be saved with the <code>.css</code> file extension. Here&#39;s a brief external style sheet saved as <code>myStyles.css</code>.  <strong>Note that in the case of external stylesheets no style tags are used.</strong></p>
+<pre><code>p    {
+    font-family: Arial;
+    font-size: 10pt;
+    }
+
+strong {
+    color: red;
+    }
+
+em    {
+    color: blue;
+    }
+</code></pre><p>You should be able to tell from context what the style rules do in this case.  To attach the <code>myStyles.css</code> file to the HTML document the following line should appear in the <code>&lt;head&gt;</code> section of the HTML document:</p>
+<pre><code>&lt;link href=&quot;myStyles.css&quot; rel=&quot;stylesheet&quot; type=&quot;text/css&quot;/&gt;
+</code></pre><p>There are a couple of things to note here about the <code>&lt;link&gt;</code> tag. First the <code>href</code> attribute should point to the path and filename for your CSS. In the case above the CSS appears in the same folder as the HTML.  The <code>rel</code> attribute and the <code>type</code> attribute always appear as shown here and are required. </p>
+<p>Like the <code>&lt;br/&gt;</code> tag, the <code>&lt;link /&gt;</code> tag is an empty tag and uses the <code>/</code> character at the end of the tag to self-close.</p>
+<h2 id="understand-fundamental-typographical-css-rules">Understand Fundamental Typographical CSS Rules</h2>
+<p>You&#39;ve already seen a number of fundamental CSS rules applied. These typographical rules are all fairly straight forward.  They are all applied in the manner we&#39;ve demonstrated here.</p>
+<p>Here are the most important CSS text properties.  (The term property and the term rule are interchangeable).</p>
+<table>
+<thead>
+<tr>
+<th>Rule</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>color</td>
+<td>Sets the color of text in rgb, hex or color-name format</td>
+</tr>
+<tr>
+<td>letter-spacing</td>
+<td>Sets space between characters in text</td>
+</tr>
+<tr>
+<td>line-height</td>
+<td>Sets the height of an individual line.</td>
+</tr>
+<tr>
+<td>text-align</td>
+<td>Right, Center, Left Align or Justify your text</td>
+</tr>
+<tr>
+<td>text-decoration</td>
+<td>Sets underline, or overline on text</td>
+</tr>
+<tr>
+<td>text-indent</td>
+<td>Specifies indent on first line of text</td>
+</tr>
+<tr>
+<td>text-shadow</td>
+<td>Specifies a drop shadow on text</td>
+</tr>
+<tr>
+<td>text-transform</td>
+<td>Controls the Capitalization of text</td>
+</tr>
+<tr>
+<td>vertical-align</td>
+<td>Set the vertical alignment of your text</td>
+</tr>
+<tr>
+<td>font-family</td>
+<td>Set the typeface for text</td>
+</tr>
+<tr>
+<td>font-size</td>
+<td>Sets the font-size of text</td>
+</tr>
+<tr>
+<td>font-style</td>
+<td>Sets the style in which font is presented. &quot;Normal&quot;, &quot;Italic&quot; and &quot;Oblique&quot; are the options.</td>
+</tr>
+<tr>
+<td>font-variant</td>
+<td>Allows use of small caps (Where lower case letters are represented by smaller upper-case letters)</td>
+</tr>
+<tr>
+<td>font-weight</td>
+<td>Sets the boldness of text.</td>
+</tr>
+</tbody>
+</table>
+<p>Some of these rules, like <code>font-size</code> require a measurement. CSS is very flexible when it comes to measuring type.  Below is a chart of the most common types measurements that are available.</p>
+<table>
+<thead>
+<tr>
+<th>Unit</th>
+<th>Description</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>%</td>
+<td>Defines a measurement as a percentage relative to another value, typically an enclosing element.</td>
+<td><code>p {font-size: 16pt; line-height: 125%;}</code></td>
+</tr>
+<tr>
+<td>cm</td>
+<td>Defines a measurement in centimeters.</td>
+<td><code>div {margin-bottom: 2cm;}</code></td>
+</tr>
+<tr>
+<td>em</td>
+<td>A relative measurement for the height of a font in em spaces. Because an em unit is equivalent to the size of a given font, if you assign a font to 12pt, each &quot;em&quot; unit would be 12pt; thus, 2em would be 24pt.</td>
+<td><code>p {letter-spacing: 7em;}</code></td>
+</tr>
+<tr>
+<td>in</td>
+<td>Defines measurements in inches</td>
+<td><code>p {word-spacing: .15in;}</code></td>
+</tr>
+<tr>
+<td>mm</td>
+<td>Defines measurements in millimeters</td>
+<td><code>p {word-spacing: 15mm;}</code></td>
+</tr>
+<tr>
+<td>pt</td>
+<td>Defines a measurement in points. A point is defined as 1/72nd of an inch.</td>
+<td><code>body {font-size: 18pt;}</code></td>
+</tr>
+<tr>
+<td>px</td>
+<td>Defines a measurement in screen pixels.</td>
+<td><code>p {padding: 25px;}</code></td>
+</tr>
+</tbody>
+</table>
+<p>Despite the flexibility afforded by CSS, most developers stick to <code>px</code>, <code>pt</code>, and <code>em</code>.  Because it&#39;s a relative measurement that respects the users preferences <code>em</code> is becoming the most accepted type measurement unit.</p>
+<h2 id="debug-this-semantic-html">Debug This: Semantic HTML</h2>
+<p>You know what to do here.  We&#39;ve got two separate files here.</p>
+<p><code>westport_debug.html</code></p>
+<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+    &lt;head&gt;
+        &lt;title&gt;CSS Text&lt;/title&gt;
+        &lt;link href=&quot;westportcss&quot; relationship=&quot;StyleSheet&quot; /&gt;  
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;h1&gt;Westport, Connecticut&lt;/h1&gt;
+        &lt;p&gt;Westport has a vibrant downtown and a healthy
+         commercial environment the generates the feeling of
+         a New England town with the convenience of modern life. 
+         Residents enjoy the quality of live due to the commitment 
+         to conserve the natural resources, preserve traditions and 
+         support community events. The town provides a wide range 
+         of leisure activities and recreational venues. &lt;/p&gt;
+
+        &lt;p&gt;Westport is an affluent town located in Fairfield County,
+         Connecticut, along Long Island Sound within Connecticut&#39;s
+          Gold Coast. It is 29 miles (47 km) northeast of New 
+          York City. The town had a population of 26,391 according
+          to the 2010 U.S. Census, and is ranked 22nd among 
+          America’s 100 Richest Places as well as second in 
+          Connecticut, with populations between 20,000 and 65,000&lt;/p&gt;
+    &lt;/body&gt;
+&lt;/html&gt;
+</code></pre><p><code>westportcss.css</code></p>
+<pre><code>hl
+{
+    font-family: Verdana
+    font-size: 1.75mem
+    font-weight: bold
+    text-decoration: none
+    font-variant: mall-caps
+    color: rgb(75,0,100)
+}
+
+p
+{
+    line-height: 2em
+    text-align: left
+}
+</code></pre><p>With errors corrected your file should appear like this:<br><img src="https://s3.amazonaws.com/coursewareframework/html5authoring/Screen+Shot+2018-10-07+at+8.32.40+AM.png" alt="enter image description here"></p>
+<h2 id="submit-this-">Submit This:</h2>
+<p>Find or write a paragraph or two about your hometown or about a location that you like. (Wikipedia is a good source for this-- Make sure you give appropriate credit in your document!) Create correctly styled HTML5 and use appropriate markup </p>
+<p>Using some of the CSS properties we&#39;ve discussed in this section, create a pleasing and readable design for your document.  Use an external CSS file to create your typography.  (There is no correct or incorrect for this lab as long as your CSS correctly styles your HTML document!)</p>
+<p>Have some fun with this!</p>
+<p>Remember, when submitting the work please use the following naming convention for your file:   <code>HTMLAUTHORING_LastName_SectionNumber.html</code>.  So if your last name is Smith and your submitting section 8, you file name should be <code>HTMLAUTHORING_Smith_8.html</code>.</p>
+<p>For this course visit <a href="https://www.dropbox.com/request/RhW9kBDXtisq2Fsvg3hY">https://www.dropbox.com/request/RhW9kBDXtisq2Fsvg3hY</a> to submit your assignments.</p>
+
+</body>
+</html>
+<!-- This document was created with MarkdownPad, the Markdown editor for Windows (http://markdownpad.com) -->

@@ -1,0 +1,257 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JS for App Dev Section 7</title>
+  <link rel="stylesheet" href="https://stackedit.io/style.css" />
+</head>
+
+<body class="stackedit">
+  <div class="stackedit__html"><p><img src="http://frameworktv.com/images/FrameWork%20150%20x%20200.png" alt="Framework Television Logo"></p>
+<h1 id="javascript-for-app-development">JavaScript for App Development</h1>
+<h3 id="by-mark-lassoff-founder-framework-television">By Mark Lassoff, Founder Framework Television</h3>
+<h2 id="section-seven">Section Seven</h2>
+<blockquote>
+<p>Expect this section to step up the complexity considerably. We’re moving in to an area that’s more ethereal.  Move slowly through the material and review until you understand it.  Understanding classes and objects is foundational and really undergirds your success in learning to program.<br>
+Most of all:  Don’t give up.  Don’t let complexity and the work needed to understand it be the reason you don’t succeed!  I promise that you can do this if you spend the time.<br>
+-Mark</p>
+</blockquote>
+<p>We’re going to make your world more object oriented.</p>
+<p>Object oriented programming came in to favor in the nineties because it provided a systemic way to deal with complex problems that had to be translated in to code.  It is, fundamentally, a way of looking at the world that breaks real-world items in to their core properties and actions.</p>
+<p>In this section we’ll be creating Objects a couple of different ways. First we’ll create an object directly.  We’ll create its properties and initialize them.  We’ll add it’s methods and use them. However the true power of Object Oriented programming will come with our second example-- where we’ll create a Class, which is a blueprint for an object.  We’ll then instantiate multiple instances of that class.</p>
+<p>Imagine you were tasked with creating a card game.  Could you think of anything within the game that could be represented as a class?  Perhaps:</p>
+<ul>
+<li>a Card?</li>
+<li>a Hand?</li>
+<li>a Player?</li>
+</ul>
+<p>Each of these items could easily be thought of as a Class.  A player for example would have a name, bank, and, perhaps and avatar.  The value of these properties would differ, but the properties themselves would remain the same.</p>
+<p>A card would have a suit and a value.  Again, each card would have a different suit and value combination, however, each card would have the suite and value properties.</p>
+<p>As with anything, the abstract ideas of classes and objects will better crystalize as you work with them.  Let’s go!</p>
+<h2 id="section-7-goals">Section 7 Goals</h2>
+<p>In this section of the course your goals are:</p>
+<ul>
+<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled=""> Understand the Design of a Class</li>
+<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled=""> Create a Simple Class</li>
+<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled=""> Create a Class Prototype</li>
+<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled=""> Create Object Instances from That Class</li>
+</ul>
+<h2 id="watch-this--section-7-video">Watch This:  Section 7 Video</h2>
+<p>As always your course videos are available on YouTube, Roku and other locations. However, only those officially enrolled have access to this course guide, are able to submit assignments, work with the instructor, and get this guide.</p>
+<p>Watch this section video at:  <a href="https://www.youtube.com/watch?v=qxtMtud3f50">https://www.youtube.com/watch?v=qxtMtud3f50</a></p>
+<h2 id="understanding-the-design-of-a-class">Understanding the Design of a Class</h2>
+<p>Good class design encompasses all of the necessary properties to describe the class and all of the necessary methods to model behavior.  The process of boiling a something down to a class with properties and methods is known as <strong>abstraction</strong>.</p>
+<p>Let’s take a bank account and through the process of abstraction boil it down to it’s properties and methods:</p>
+<pre><code>Bank Account
+
+Properties:
+Account Number
+Balance
+Account Type
+Opening Date
+Account Status
+
+Methods:
+Open Account
+Close Account
+Credit
+Debit
+</code></pre>
+<p>Of course, my abstraction is a slightly simplified version of the real world.  Every abstraction is, but, you can see here how with this object we could write could to model an actual bank account.</p>
+<h3 id="do-this--create-a-model">Do This:  Create a Model</h3>
+<p>Using the bank account example above as a guide, create a class to model a real estate listing.  Make it comprehensive.  Remember we do not want to include VALUES, just the properties and the methods similar to how the bank account was modeled.  We know there will be a balance-- but we don’t know what the balance is.</p>
+<blockquote>
+<p>If you are not particularly familiar with the real estate world, visit a site like Zillow and look some listings so you can create your class.</p>
+</blockquote>
+<p><strong>Once you’ve created your class share your properties and methods using the format above with others in the course via Slack. Note how similar or different your version is from others that are posted.</strong></p>
+<h2 id="creating-a-simple-object">Creating a Simple Object</h2>
+<p>So let’s take this idea of a class and translate it in to code. This first version of a class we’re looking at defines the class and object at the same time.  While this has limited utility, it does allow use to create and use and single version of an object.</p>
+<pre><code>&lt;div id="output"&gt;&lt;/div&gt;
+&lt;script&gt;
+    var car = {};
+    //Properties
+    car.type = "Sedan";
+    car.make = "Honda";
+    car.model = "Civic";
+    car.year = 2015;
+    car.weight = 3000;
+    
+    //Method
+    car.startCar = function()
+    {
+        alert("Car is started");
+    }
+    
+    car.stopCar = function()
+    {
+        alert("Car is stopped");
+    }
+   
+    var out = "Car Type: " + car.type;
+    out += "&lt;br/&gt;Car Make: " + car.make;
+    out += "&lt;br/&gt;Year: " + car.year;
+    
+    car.startCar();
+    car.stopCar();
+    
+    document.getElementById('output').innerHTML = out;
+ &lt;/script&gt;
+</code></pre>
+<p>The code above creates a <code>car</code> object. The car is described in terms of its properties <code>type</code>, <code>make</code>, <code>model</code>, <code>year</code>, and <code>weight</code>.  In this case you’ll notice that these properties are immediately populated with values. Properties use the common dot notation.</p>
+<p>It might be helpful to think of properties as adjectives- the elements that describe the class in your model.</p>
+<p>This class also has some methods which are behaviors modeled in the class. In this model (simply) modeled are starting the car and stopping the car with the <code>startCar()</code> and <code>stopCar()</code> methods.</p>
+<p>Remember, in this first example we are creating the class and object at the same time, so, right after the methods are defined we can start using the class.</p>
+<p>The properties are access for output, again, using the dot notation.  The methods are also run using the dot notation.</p>
+<h3 id="do-this-create-your-first-class">Do This: Create Your First Class</h3>
+<p>Using the class outline you created previously for a real estate listing (and any feedback you received over Slack), create the class using the code above as a guide.  You should be able to establish and output the value of the properties and create and use at least one method related to the listing.</p>
+<h2 id="create-a-class-prototype">Create a Class Prototype</h2>
+<p>Now let’s create a class that is just a blue print for objects. You’ll notice there are no values assigned to the properties here.  The syntax is a bit different because this time we’re creating a model or prototype for the class.</p>
+<blockquote>
+<p>As a standard Class Prototypes are created in their own separate files saved as a Javascript file.  The file below should optimally have the filename Car.js.<br>
+It then needs to be included in any file that uses it like this: <code>&lt;script src="Car.js"&gt;/script&gt;</code></p>
+</blockquote>
+<p>Examine the code below.</p>
+<pre><code>var Car =  function(type, make, model, year){
+    //Properties
+    this.type = type;
+    this.make = make;
+    this.model = model;
+    this.year = year;
+    this.speed = 0;
+    
+    //Methods
+    Car.prototype.accelerate= function()
+    {
+        if(this.speed &lt; 100){
+            this.speed += 10;
+            console.log("Speed is now: " + this.speed);
+        } else
+        {
+            console.log("Top speed reached");
+        }
+    },
+    
+    Car.prototype.brake = function()
+    {
+        if(this.speed &gt; 10)
+        {
+            this.speed -= 10;
+            console.log("Speed is now: " + this.speed);
+        } else
+        {
+            this.speed = 0;
+            console.log("Speed is now: " + this.speed);
+
+        }
+    }
+
+}
+</code></pre>
+<p>The code begins with a constructor function that is fired every time an object of this class type is made.</p>
+<p>The initial values for all of the properties are set. These values are either passed in when the object is created, or, initialized here.</p>
+<pre><code>var Car =  function(type, make, model, year){
+    //Properties
+    this.type = type;
+    this.make = make;
+    this.model = model;
+    this.year = year;
+    this.speed = 0;
+</code></pre>
+<p>You’ll also notice repeated use of the keyword <code>this</code>. Meant to be self-reflective, <code>this</code> refers to the instance created.  We are essentially creating properties that live in the instances created, not in the class itself.</p>
+<p>To create an instance of this class you’d use something like:</p>
+<pre><code>var redCar = new Car("sedan", "Ford", "Tauras", "2010");
+</code></pre>
+<p>The instance created, <code>redCar</code> now has all of the properties and methods of the Car model.  If you accessed the value of <code>redCar.year</code> the value would be 2010.</p>
+<p>The methods, created with the <code>prototype</code> keyword, allow the car to accelerate and brake. Note that the speed is tracked by a variable internal to the class called <code>speed</code> and is access in the object created from the model above as <code>redCar.speed</code> .</p>
+<h2 id="create-and-use-class-instance">Create and use Class Instance</h2>
+<p>The code above creates a model for the object, but not the object itself. It is, again, simply a blue print to make <code>Car</code> objects in JavaScript.</p>
+<p>We would actually create the objects using the code below:</p>
+<pre><code>&lt;script src="model.js"&gt;&lt;/script&gt;
+&lt;script&gt;
+    //Create object or instance
+    var myHonda = new Car("Sedan","Honda", "Civic", 2017)
+    var myLexus = new Car("Sedan", "Lexus", "330", 2015);
+    alert(myHonda.model);
+    myHonda.accelerate();
+    myHonda.accelerate();
+    myHonda.accelerate();
+    myHonda.accelerate();
+    myHonda.brake();
+    
+    alert(myLexus.model);
+    myLexus.accelerate();
+    alert(myLexus.make + " going " + myLexus.speed + " MPH.");
+&lt;/script&gt;
+</code></pre>
+<p>We actually create two distinct objects in this example:  <code>myHonda</code> and <code>myLexus</code>.  Each of the objects created is distinct and carries unique property values.  The objects are then “exercises” by implementing the methods <code>accelerate()</code> and <code>brake()</code>.</p>
+<h2 id="do-this-debugging">Do This: Debugging</h2>
+<p>Assume the correct instantiation for this would be:</p>
+<pre><code>var sheep = new Animal("mammel", 124, "White", true, 42);
+</code></pre>
+<p>This code isn’t working.</p>
+<p>Filename: Animal.js</p>
+<pre><code>var Animal =  function(type, weight, color, fur, length){
+    //Properties
+    this.type = type;
+    this.weight = weight;
+    this.color = color;
+    this.fur = fur;
+    this.length = length;
+    this.soundItMakes = soundItMakes;
+    
+    //Methods
+    animal.Prototype.makeSound= function makeSound()
+    {
+        alert(this.soundItMakes);
+    },
+    
+    Animal.Prototype.breathe = function()
+    {
+        alert(this.type + " is " + breathing);
+    }
+
+}
+</code></pre>
+<p>To test your corrections, you’ll have to create a file that includes this script (Animal.js) and then creates an instance of Animal, and implements the makeSound() and breathe() functions.</p>
+<h2 id="submit-this-lab-exercise">Submit This: Lab Exercise</h2>
+<p>Assume we include the following properties and methods in a prototype of a game player:</p>
+<pre><code>Properties:
+name (String)
+livesLeft (integer)
+score (integer)
+speed (integer)
+gridLocationX (integer)
+gridLocationY (integer)
+
+Methods:
+die()
+moveLeft()
+moveRight()
+moveUp()
+moveDown()
+</code></pre>
+<p>Imagine the game is played on 10 x 10 grid, where the upper left hand corner is position (0,0) and the bottom right is position (9,9).  The player Starts at 0,0.  <code>moveRight()</code> would move the player to (1,0).  From the initial starting point `moveDown()) would move the player to (0,1).</p>
+<p>The player should not be able to fall off the board.</p>
+<p><img src="https://s3.amazonaws.com/coursewareframework/jsforappdev/Game+board.png" alt="Game board"></p>
+<p>Knowing what you know create a model for a Player using the properties and methods above.  Implement the methods according to the rules in the discussion.</p>
+<p>A couple of hints:</p>
+<ul>
+<li>When you initialize the Player in the constructor <code>gridLocationX</code> and <code>gridLocationY</code> should be initialized to 0.</li>
+<li>X is left to right.  Y is up and down.</li>
+<li>So when creating the <code>moveUp()</code> method you want to include the following:  <code>if (this.gridLocationY &gt; 0) { this.GridLocationY =- 1 };</code> meaning we can’t have a <code>gridLocationY</code> of less than zero.</li>
+<li>Solve one problem at a time to avoid overwhelm.</li>
+</ul>
+<p>Your only deliverable is the model file which should be named <code>Player.js</code>.</p>
+<p><strong>As mentioned at the beginning, this represents a significant increase in sophistication from previous labs.  Expect to struggle with this lab and request help from other members and your instructional team in the class community.</strong></p>
+<p><em>There will be a solution set circulated for this problem.</em></p>
+<p>Good luck!</p>
+<p>Please save your file in the following format to insure proper credit:<br>
+<code>LastName_Exercise7</code>.</p>
+<p><em>Remember every exercise must be submitted in order for you to earn certification.</em>  Once you’ve completed this exercise, you’re ready to move on to Section 8.</p>
+<p>Submit your exercises to:  <a href="https://www.dropbox.com/request/Nl7bSaAe11ZI0PgLRonA">https://www.dropbox.com/request/Nl7bSaAe11ZI0PgLRonA</a></p>
+</div>
+</body>
+
+</html>

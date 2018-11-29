@@ -1,0 +1,284 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HTML5 Authoring 4</title>
+  <link rel="stylesheet" href="https://stackedit.io/style.css" />
+</head>
+
+<body class="stackedit">
+  <div class="stackedit__html"><h1 id="html5-authoring-with-mark-lassoff">HTML5 Authoring with Mark Lassoff</h1>
+<h2 id="section-4--getting-started-with-css-text-rules">Section 4:  Getting Started with CSS Text Rules</h2>
+<blockquote>
+<p>Note:  Framework Television offers a full certification course in CSS.  The included material with in the HMTL5 Authoring program is designed to give you enough CSS knowledge to start working with the language, but is not designed to be comprehensive.</p>
+</blockquote>
+<p>CSS (Cascading Style Sheet language) provides the design layer to web based, and much mobile content.  It is a mark up language that allows you, as the developer, to set rules governing how content should appear on the users’ screens.</p>
+<p>This has become more challenging of late because we no longer live in a world where screen size, resolution, bandwidth and other factors are predictable.  People viewing your content may range from someone in an office with a fiber internet connection and a giant screen, to someone in subsaharan Africa with a cell phone, slow connection and tiny screen.</p>
+<p>Fortunately CSS has both the power and the flexibility to produce styles that look great across the range of devices in use on today’s internet.</p>
+<blockquote>
+<p>Understanding the “mechanicals” of CSS are just one aspect of producing digital content.  You also have to understand the rules of digital design and usability.  Designing interfaces that are usable and look good is a separate, related field to web development known as UX (User eXperience).  You my find UX is a good direction to move in if you want to spend more time creating designs than writing code.<br>
+You won’t escape the coding entirely, however, as today, almost all UX designers have a firm grip of HTML5 and CSS.</p>
+</blockquote>
+<p>After completing this section you will:</p>
+<ul>
+<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled=""> Understand the basic CSS syntax.</li>
+<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled=""> Use External and Internal Style Sheets</li>
+<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled=""> Understand Fundamental Typographical CSS Rules</li>
+<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled=""> Demonstrate CSS Override</li>
+</ul>
+<h3 id="watch-this--html5-section-004-video">Watch This:  HTML5 Section 004 Video</h3>
+<p>As always your course videos are available on YouTube, Roku and other locations. However, only those officially enrolled have access to this course guide, are able to submit assignments, work with the instructor, and get this guide.</p>
+<p>Watch the section video at:  <a href="https://youtu.be/Syt41bH9Kcs">https://youtu.be/Syt41bH9Kcs</a></p>
+<h2 id="understand-basic-css-syntax">Understand Basic CSS Syntax</h2>
+<p>CSS uses a different syntax than HTML. It is, however, designed to work easily with HTML.</p>
+<p>CSS statements essentially have two parts:  The selector and the style rule. The selector determines which elements to apply the CSS to and the style rule determines which styles to apply.  Here’s a typical block of CSS code:</p>
+<pre><code>p	{
+		color: #121212;
+		font-size: 14pt;
+	}
+</code></pre>
+<p>The selector in this case is <code>p</code>.  This means that any <code>&lt;p&gt;</code> tags would be selected and styled.  (There are numerous other types of selectors that we’ll get in to later in the course).</p>
+<p>The style rules should be somewhat understandable just from reading them.  In the case above, we’re applying two style rules to the <code>&lt;p&gt;</code> tags.  The first rule applies a deep gray color to the text.  The second sets the size of the text to 14 points. Note that each CSS style rule is terminated by a semicolon.</p>
+<p>Let’s take a look at a second example:</p>
+<pre><code>h3	{
+	text-decoration: underline;
+	}
+</code></pre>
+<p>This rule would apply an underline to any h3 tags appearing in the document.</p>
+<h2 id="use-inline-internal--and-external-style-sheets">Use Inline, Internal  and External Style Sheets</h2>
+<blockquote>
+<p>The terms “CSS” and stylesheet are being used interchangeably throughout this section.</p>
+</blockquote>
+<p>As is true with many aspects of digital development, there are several methods you can use to apply CSS code. Let’s look at the three primary methods individually:</p>
+<h3 id="inline-css">Inline CSS</h3>
+<p>Inline CSS is applied via the HTML <code>&lt;style&gt;</code> tag. This method is commonly used with HTML emails because an external style sheet is not possible.</p>
+<p>Internal CSS looks like this:</p>
+<pre><code>&lt;h1 style="color: red; font-size: 24pt;"&gt;I'm Stylin'&lt;/h1&gt;
+</code></pre>
+<p>The <code>&lt;h1&gt;</code> element here would appear red in a 24 pt size. The result would look like this:<br>
+<img src="https://s3.amazonaws.com/coursewareframework/html5authoring/Screen+Shot+2018-10-07+at+7.46.56+AM.png" alt="Internal Style Sheet Applied"><br>
+Outside of use with HTML emails, the use of inline styles is not considered a best practice.  Well formed CSS should be able to be easily:</p>
+<ul>
+<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled=""> Edited within a document.  With inline CSS each individual instance of CSS must be located and edited.</li>
+<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled=""> Applied to multiple elements on multiple pages lending to style consistency across a site.</li>
+</ul>
+<h3 id="internal-style-sheets">Internal Style Sheets</h3>
+<p>Internal stylesheets appear in the <code>&lt;head&gt;</code> section of an HTML document. The CSS itself will appear within a <code>&lt;style&gt;</code> element.  This is advantageous because all the CSS is in one location and easily editable.  Perhaps, more importantly, CSS style rules can be applied to multiple elements, unlike in the case of inline CSS.  Here’s an example of an internal style sheet.</p>
+<pre><code>&lt;head&gt;
+&lt;title&gt;Example Internal CSS&lt;/title&gt;
+&lt;style&gt;
+	h1 {
+		font-size: 28pt;
+		font-family: Arial;
+		font-weight: bold;
+		color: #121212;
+		}
+	h2  {
+		font-family: 20px;
+		font-family: Arial;
+		font-weight: normal;
+		}
+&lt;/style&gt;
+&lt;/head&gt;
+</code></pre>
+<p>In this brief style sheet we’ve created style rules that apply to <code>&lt;h1&gt;</code> and <code>&lt;h2&gt;</code> tags within our document.</p>
+<h3 id="external-style-sheets">External Style Sheets</h3>
+<p>External style sheets appear in their own file and are attached to the HTML document using the <code>&lt;link&gt;</code> tag.</p>
+<p>External Style Sheets are often the preferred method of placing CSS because the document can be applied to multiple HTML files giving related documents consistent styling and allowing style changes across multiple pages to be completed with a single edit.</p>
+<p>An external style sheet should be saved with the <code>.css</code> file extension. Here’s a brief external style sheet saved as <code>myStyles.css</code>.  <strong>Note that in the case of external stylesheets no style tags are used.</strong></p>
+<pre><code>p	{
+	font-family: Arial;
+	font-size: 10pt;
+	}
+
+strong {
+	color: red;
+	}
+
+em	{
+	color: blue;
+	}
+</code></pre>
+<p>You should be able to tell from context what the style rules do in this case.  To attach the <code>myStyles.css</code> file to the HTML document the following line should appear in the <code>&lt;head&gt;</code> section of the HTML document:</p>
+<pre><code>&lt;link href="myStyles.css" rel="stylesheet" type="text/css"/&gt;
+</code></pre>
+<p>There are a couple of things to note here about the <code>&lt;link&gt;</code> tag. First the <code>href</code> attribute should point to the path and filename for your CSS. In the case above the CSS appears in the same folder as the HTML.  The <code>rel</code> attribute and the <code>type</code> attribute always appear as shown here and are required.</p>
+<p>Like the <code>&lt;br/&gt;</code> tag, the <code>&lt;link /&gt;</code> tag is an empty tag and uses the <code>/</code> character at the end of the tag to self-close.</p>
+<h2 id="understand-fundamental-typographical-css-rules">Understand Fundamental Typographical CSS Rules</h2>
+<p>You’ve already seen a number of fundamental CSS rules applied. These typographical rules are all fairly straight forward.  They are all applied in the manner we’ve demonstrated here.</p>
+<p>Here are the most important CSS text properties.  (The term property and the term rule are interchangeable).</p>
+
+<table>
+<thead>
+<tr>
+<th>Rule</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>color</td>
+<td>Sets the color of text in rgb, hex or color-name format</td>
+</tr>
+<tr>
+<td>letter-spacing</td>
+<td>Sets space between characters in text</td>
+</tr>
+<tr>
+<td>line-height</td>
+<td>Sets the height of an individual line.</td>
+</tr>
+<tr>
+<td>text-align</td>
+<td>Right, Center, Left Align or Justify your text</td>
+</tr>
+<tr>
+<td>text-decoration</td>
+<td>Sets underline, or overline on text</td>
+</tr>
+<tr>
+<td>text-indent</td>
+<td>Specifies indent on first line of text</td>
+</tr>
+<tr>
+<td>text-shadow</td>
+<td>Specifies a drop shadow on text</td>
+</tr>
+<tr>
+<td>text-transform</td>
+<td>Controls the Capitalization of text</td>
+</tr>
+<tr>
+<td>vertical-align</td>
+<td>Set the vertical alignment of your text</td>
+</tr>
+<tr>
+<td>font-family</td>
+<td>Set the typeface for text</td>
+</tr>
+<tr>
+<td>font-size</td>
+<td>Sets the font-size of text</td>
+</tr>
+<tr>
+<td>font-style</td>
+<td>Sets the style in which font is presented. “Normal”, “Italic” and “Oblique” are the options.</td>
+</tr>
+<tr>
+<td>font-variant</td>
+<td>Allows use of small caps (Where lower case letters are represented by smaller upper-case letters)</td>
+</tr>
+<tr>
+<td>font-weight</td>
+<td>Sets the boldness of text.</td>
+</tr>
+</tbody>
+</table><p>Some of these rules, like <code>font-size</code> require a measurement. CSS is very flexible when it comes to measuring type.  Below is a chart of the most common types measurements that are available.</p>
+
+<table>
+<thead>
+<tr>
+<th>Unit</th>
+<th>Description</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>%</td>
+<td>Defines a measurement as a percentage relative to another value, typically an enclosing element.</td>
+<td><code>p {font-size: 16pt; line-height: 125%;}</code></td>
+</tr>
+<tr>
+<td>cm</td>
+<td>Defines a measurement in centimeters.</td>
+<td><code>div {margin-bottom: 2cm;}</code></td>
+</tr>
+<tr>
+<td>em</td>
+<td>A relative measurement for the height of a font in em spaces. Because an em unit is equivalent to the size of a given font, if you assign a font to 12pt, each “em” unit would be 12pt; thus, 2em would be 24pt.</td>
+<td><code>p {letter-spacing: 7em;}</code></td>
+</tr>
+<tr>
+<td>in</td>
+<td>Defines measurements in inches</td>
+<td><code>p {word-spacing: .15in;}</code></td>
+</tr>
+<tr>
+<td>mm</td>
+<td>Defines measurements in millimeters</td>
+<td><code>p {word-spacing: 15mm;}</code></td>
+</tr>
+<tr>
+<td>pt</td>
+<td>Defines a measurement in points. A point is defined as 1/72nd of an inch.</td>
+<td><code>body {font-size: 18pt;}</code></td>
+</tr>
+<tr>
+<td>px</td>
+<td>Defines a measurement in screen pixels.</td>
+<td><code>p {padding: 25px;}</code></td>
+</tr>
+</tbody>
+</table><p>Despite the flexibility afforded by CSS, most developers stick to <code>px</code>, <code>pt</code>, and <code>em</code>.  Because it’s a relative measurement that respects the users preferences <code>em</code> is becoming the most accepted type measurement unit.</p>
+<h2 id="debug-this-semantic-html">Debug This: Semantic HTML</h2>
+<p>You know what to do here.  We’ve got two separate files here.</p>
+<p><code>westport_debug.html</code></p>
+<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+    &lt;head&gt;
+        &lt;title&gt;CSS Text&lt;/title&gt;
+        &lt;link href="westportcss" relationship="StyleSheet" /&gt;  
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;h1&gt;Westport, Connecticut&lt;/h1&gt;
+        &lt;p&gt;Westport has a vibrant downtown and a healthy
+         commercial environment the generates the feeling of
+         a New England town with the convenience of modern life. 
+         Residents enjoy the quality of live due to the commitment 
+         to conserve the natural resources, preserve traditions and 
+         support community events. The town provides a wide range 
+         of leisure activities and recreational venues. &lt;/p&gt;
+
+        &lt;p&gt;Westport is an affluent town located in Fairfield County,
+         Connecticut, along Long Island Sound within Connecticut's
+          Gold Coast. It is 29 miles (47 km) northeast of New 
+          York City. The town had a population of 26,391 according
+          to the 2010 U.S. Census, and is ranked 22nd among 
+          America’s 100 Richest Places as well as second in 
+          Connecticut, with populations between 20,000 and 65,000&lt;/p&gt;
+    &lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<p><code>westportcss.css</code></p>
+<pre><code>hl
+{
+    font-family: Verdana
+    font-size: 1.75mem
+    font-weight: bold
+    text-decoration: none
+    font-variant: mall-caps
+    color: rgb(75,0,100)
+}
+
+p
+{
+    line-height: 2em
+    text-align: left
+
+}
+</code></pre>
+<p>With errors corrected your file should appear like this:<br>
+<img src="https://s3.amazonaws.com/coursewareframework/html5authoring/Screen+Shot+2018-10-07+at+8.32.40+AM.png" alt="enter image description here"></p>
+<h2 id="submit-this">Submit This:</h2>
+<p>Find or write a paragraph or two about your hometown or about a location that you like. (Wikipedia is a good source for this-- Make sure you give appropriate credit in your document!) Create correctly styled HTML5 and use appropriate markup</p>
+<p>Using some of the CSS properties we’ve discussed in this section, create a pleasing and readable design for your document.  Use an external CSS file to create your typography.  (There is no correct or incorrect for this lab as long as your CSS correctly styles your HTML document!)</p>
+<p>Have some fun with this!</p>
+<p>Remember, when submitting the work please use the following naming convention for your file:   <code>HTMLAUTHORING_LastName_SectionNumber.html</code>.  So if your last name is Smith and your submitting section 8, you file name should be <code>HTMLAUTHORING_Smith_8.html</code>.</p>
+<p>For this course visit <a href="https://www.dropbox.com/request/RhW9kBDXtisq2Fsvg3hY">https://www.dropbox.com/request/RhW9kBDXtisq2Fsvg3hY</a> to submit your assignments.</p>
+</div>
+</body>
+
+</html>

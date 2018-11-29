@@ -1,0 +1,213 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JS for App Dev Section 3</title>
+  <link rel="stylesheet" href="https://stackedit.io/style.css" />
+</head>
+
+<body class="stackedit">
+  <div class="stackedit__html"><p><img src="http://frameworktv.com/images/FrameWork%20150%20x%20200.png" alt="Framework Television Logo"></p>
+<h1 id="javascript-for-app-development">JavaScript for App Development</h1>
+<h3 id="by-mark-lassoff-founder-framework-television">By Mark Lassoff, Founder Framework Television</h3>
+<h2 id="section-three">Section Three</h2>
+<h2 id="section-3-goals">Section 3 Goals</h2>
+<p>In this section of the course your goals are:</p>
+<ul>
+<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled=""> Understand Arithmetic Operators</li>
+<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled=""> Apply Arithmetic Operators to coding problems</li>
+<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled=""> Understand post-fix and pre-fix increment and decrement operators.</li>
+<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled=""> Understand logical Operators</li>
+</ul>
+<h2 id="watch-this--section-3-video">Watch This:  Section 3 Video</h2>
+<p>As always your course videos are available on YouTube, Roku and other locations. However, only those officially enrolled have access to this course guide, are able to submit assignments, work with the instructor, and get this guide.</p>
+<p>Watch this section video at:  <a href="https://www.youtube.com/watch?v=rfnUcpfefhs&amp;t=8s">https://www.youtube.com/watch?v=rfnUcpfefhs&amp;t=8s</a></p>
+<h2 id="understanding-the-arithmetic-operators">Understanding the Arithmetic Operators</h2>
+<p>The original purpose of computing was to solve complex mathematical problems. While you certainly don’t have to be a math expert to successfully code, you do have to understand the basics of arithmetic. Many different aspects of software depend on arithmetic to some degree. Game development, financial software, graphics, audio all have mathematically based algorithms.</p>
+<p>Now don’t let this scare you in to running out and taking a math class. If you understand arithmetic, you’ll do just fine.</p>
+<p>So here are the fundamental mathematical operators:</p>
+
+<table>
+<thead>
+<tr>
+<th align="center">Operator</th>
+<th align="right">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">+</td>
+<td align="right">Addition Operator. (Also the concatenation operator, but that’s not arithmetic!)</td>
+</tr>
+<tr>
+<td align="center">-</td>
+<td align="right">Subtraction operator.</td>
+</tr>
+<tr>
+<td align="center">*</td>
+<td align="right">Multiplication Operator.</td>
+</tr>
+<tr>
+<td align="center">/</td>
+<td align="right">Division Operator.</td>
+</tr>
+<tr>
+<td align="center">%</td>
+<td align="right">Modulus operator. This operator gives you the remainder after a division operator and is useful to determine odd and even numbers.  10 % 2 = 0.</td>
+</tr>
+<tr>
+<td align="center">++</td>
+<td align="right">Increment Operator.  Adds one as in x++ adds one to the value of x.</td>
+</tr>
+<tr>
+<td align="center">--</td>
+<td align="right">Decrement Operator.  Subtracts one as in x-- subtracts one from the value of x.</td>
+</tr>
+</tbody>
+</table><p>Most of these should be pretty familiar to you.  I didn’t discover increment, decrement and modulus until I started coding, so if these are unfamiliar to you, you are very likely not alone!</p>
+<h2 id="doing-the-math">Doing the Math</h2>
+<p>Of course, these operators are only useful if you are going to put them to work in your code. Let’s write a program first that uses all of the standard mathematical operators.</p>
+<pre><code>&lt;div id="output"&gt;&lt;/div&gt;
+&lt;script&gt;
+    var x = 12.25;     //Lazy Variable Names!
+    var y = 19;
+    
+    alert("Addition: " + (x+y));
+    alert("Subtraction: " + (x-y));
+    alert("Multiplication: " + (x*y));
+    alert("Division: " + (x/y));
+    
+&lt;/script&gt;
+</code></pre>
+<p>The parentheses surrounding the the actual arithmetic give the  expression primacy-- so it’s evaluated first before the rest of the line is processed. This is a good idea to the ‘+’ for concatenation doesn’t get confused with the arithmetic expression.</p>
+<p><img src="https://s3.amazonaws.com/coursewareframework/jsforappdev/Screen+Shot+2018-09-18+at+11.38.24+AM.png" alt="Result of arithmetic"></p>
+<h2 id="modulus">Modulus</h2>
+<p>The first of the arithmetic operators that is likely new to you is the modulus operator. It provides the remainder after division has taken place. For example:</p>
+<pre><code>10 % 3 = 1
+15 % 4 = 3
+6 %  3 = 0
+19 % 2 = 1
+</code></pre>
+<p>Hopefully you get the idea.</p>
+<h3 id="do-this-get-to-know-your-new-friend-modulus">Do This: Get To Know Your New Friend, Modulus</h3>
+<p>Write a program that prompts the user twice for a number between 1 and 1,000. When the user types the number store it in a variable. When the user has provided both numbers perform the modulus operation and output the result to the user.  Test to make sure your program is working correctly.</p>
+<h2 id="postfix-and-prefix">Postfix and Prefix</h2>
+<p>The increment and decrement operators seem fairly easy to understand. Right?  There is one wrinkle that makes things a bit more complex, however.  Increment and decrement can be applied postfix or preFix.  Essentially a pre-fix operator is applied before the rest of the expression is evaluated. A post-fix expression is applied after the rest of the expression is evaluated.  Take a look at the following program.  (You’re definitely going to want to enter this one in to your text editor and follow the execution as it runs!)</p>
+<pre><code>&lt;div id="output"&gt;&lt;/div&gt;
+&lt;script&gt;
+    var x = 20;
+    var y = 25;
+    
+    x++;
+    document.getElementById('output').innerHTML = x  + "&lt;br/&gt;";
+    document.getElementById('output').innerHTML +=  ++x + "&lt;br/&gt;";
+    document.getElementById('output').innerHTML += x++ + "&lt;br/&gt;";
+    document.getElementById('output').innerHTML += x++ + "&lt;br/&gt;";
+&lt;/script&gt;
+</code></pre>
+<p>Let’s take a closer look at the program and the output.<br>
+<img src="https://s3.amazonaws.com/coursewareframework/jsforappdev/Screen+Shot+2018-09-18+at+11.52.00+AM.png" alt="Post fix and pre fix"></p>
+<p>Initially we assigned to x the value 20.  On line six we increment that by one. So when the value of x is output on line 7 we see 21 for the first value.</p>
+<p>On line eight we apply a <em>prefix increment</em> and we see the value of x increase to 22. However on lines nine and ten we apply a <em>postfix increment</em> so the value is displayed and then the increment is operator is applied, which is why the next output is 22 again.  It is applied, however, as we can see with the next output which is 23.</p>
+<p><em>After this code is all executed what is the last value held by x?</em></p>
+<h3 id="do-this-make-sure-you-understand">Do This: Make Sure You Understand</h3>
+<p>Using the y variable go through a similar series of steps with postfix and prefix decrements and see if you can predict and follow what happens.</p>
+<h2 id="being-logical">Being Logical</h2>
+<p>In addition to the arithmetic operators that we just reviewed, JavaScript depends on logical operators,. When a logical operator is evaluated the result is always true of false. (Variable can store ‘true’ and ‘false’ as values and when they do they are known as Booleans.</p>
+<p>Let’s take a look at the logical operators.</p>
+
+<table>
+<thead>
+<tr>
+<th align="right">Operator</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="right">==</td>
+<td>Equivalency operator.  Returns true if the values are equal.</td>
+</tr>
+<tr>
+<td align="right">===</td>
+<td>Equivalency operator.  This tests for value and type.  For example: <code>4 === 4</code>  is true but <code>4 === "4"</code> is false.</td>
+</tr>
+<tr>
+<td align="right">!=</td>
+<td>Not equivalent</td>
+</tr>
+<tr>
+<td align="right">&gt;</td>
+<td>Greater Than</td>
+</tr>
+<tr>
+<td align="right">&lt;</td>
+<td>Less Than</td>
+</tr>
+<tr>
+<td align="right">&gt;=</td>
+<td>Greater Than or Equal To</td>
+</tr>
+<tr>
+<td align="right">&lt;=</td>
+<td>Less Than or Equal To</td>
+</tr>
+</tbody>
+</table><p>We’ll put these to greater use once we start working with conditionals in the next section.  For now you can test them with various expressions like this:</p>
+<pre><code>&lt;script&gt;
+    var x = 5;
+    var y = 10;
+    
+    alert(x &lt; y);
+    alert(x == y);
+    alert("4" === 4);
+    alert("4" == 4);
+&lt;/script&gt;
+</code></pre>
+<p>Run some tests yourself using each of the logical operators.</p>
+<h2 id="do-this-debugging">Do This: Debugging</h2>
+<p>This code has several errors.  See if you can debug it and get it working as it should.  When working correctly it should display a story, inserting a nouns, adjectives and verbs as indicated. As is true in the real world, these errors are not always apparent and easy to spot.   Good luck.</p>
+<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+    &lt;head&gt;
+        &lt;title&gt;Debug Me&lt;/title&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;div id="output"&gt;&lt;/div&gt;
+        &lt;script&gt;
+            var x = 25.55;
+            var y = 19.232;
+            
+            var add = x + y;
+            var mod = x % y;
+            
+            var out == "";
+            out += x + "+" + y + "=" + (x+y;
+            out += "&lt;br/&gt;";
+            out += x + "%" + y   "=" + x%y);
+            
+            document.getElementById('output').innerHTML = out;
+        
+    &lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<p>If you debug correctly your output should look like this:<br>
+<img src="https://s3.amazonaws.com/coursewareframework/jsforappdev/Screen+Shot+2018-09-18+at+12.17.32+PM.png" alt="enter image description here"></p>
+<h2 id="submit-this-lab-exercise">Submit This: Lab Exercise</h2>
+<p>Create a program that prompts the user twice for numbers.  Store those variables in variables called <code>operand1</code> and <code>operand2</code>.  Using mathematical operators, display the answers to the following questions:</p>
+<p>What is the sum of operand1 and operand2?<br>
+What is the result if you subtract operand2 from operand1?<br>
+What is the result if you multiple operand1 by operand2?<br>
+Is operand1 equal to operand2?<br>
+Is operand1 smaller than operand2?<br>
+Can you divide Operand2 evenly in to operand1?</p>
+<p>Please save your file in the following format to insure proper credit:<br>
+<code>LastName_Exercise3.html</code>.</p>
+<p><em>Remember every exercise must be submitted in order for you to earn certification.</em>  Once you’ve completed this exercise, you’re ready to move on to Section 4.</p>
+<p>Submit your exercises to:  <a href="https://www.dropbox.com/request/Nl7bSaAe11ZI0PgLRonA">https://www.dropbox.com/request/Nl7bSaAe11ZI0PgLRonA</a></p>
+</div>
+</body>
+
+</html>

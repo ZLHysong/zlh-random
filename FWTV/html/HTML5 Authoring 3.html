@@ -1,0 +1,166 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HTML5 Authoring 3</title>
+  <link rel="stylesheet" href="https://stackedit.io/style.css" />
+</head>
+
+<body class="stackedit">
+  <div class="stackedit__html"><h1 id="html5-authoring-with-mark-lassoff">HTML5 Authoring with Mark Lassoff</h1>
+<h2 id="section-3--marking-up-text-content">Section 3:  Marking Up Text Content</h2>
+<p>Through the nineties and early 2000’s the idea that the web (and by extension HTML) should become more semantic was talked about quite a bit. In fact semantic HTML became a thing. One author defines semantic HTML like this:</p>
+<blockquote>
+<p><em>Semantic HTML</em>  or  <em>semantic</em>  markup is  <em>HTML</em>  that introduces meaning to the web page rather than just presentation. For example, a </p><p> tag indicates that the enclosed text is a paragraph. This is both  <em>semantic</em>  and presentational, because people know what paragraphs are and browsers know how to display them.<br>
+Jennifer Kyrnin in Lifewire <a href="https://www.lifewire.com/why-use-semantic-html-3468271">https://www.lifewire.com/why-use-semantic-html-3468271</a></p>
+</blockquote>
+<p>As HTML5 was being developed an effort was made to include more semantic tags in the language. A properly marked up HTML document now is more self-documenting due to the use of semantic HTML.</p>
+<p>It’s important to note that while semantic HTML was a popular discussion, implementation has not been as rapid. There are still many developers who write more traditional HTML using less descriptive tags.</p>
+<p>After completing this section you will:</p>
+<ul>
+<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled=""> Understand the fundamental <code>&lt;p&gt;</code> tag.</li>
+<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled=""> How to Apply Bold and Italics to Text using HTML</li>
+<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled=""> How to Use Semantic HTML5 Tags</li>
+</ul>
+<h3 id="watch-this--html5-section-003-videos">Watch This:  HTML5 Section 003 Videos</h3>
+<p>As always your course videos are available on YouTube, Roku and other locations. However, only those officially enrolled have access to this course guide, are able to submit assignments, work with the instructor, and get this guide.</p>
+<p>Watch the section videos at: 003A: <a href="https://youtu.be/wmQFvVvrSUs">https://youtu.be/wmQFvVvrSUs</a> and 003B: <a href="https://youtu.be/wBuvCHB5_yI">https://youtu.be/wBuvCHB5_yI</a></p>
+<h3 id="using-the-paragraph-tag">Using the Paragraph Tag</h3>
+<p>The paragraph tag is, quite obviously, used to mark up paragraphs. It is the grandaddy of semantic markup as its been around as long as HTML itself.</p>
+<p>The paragraph tag is likely overused in today’s world of more semantic markup.  The paragraph tag has developed a role as a generic text tag used for anything from short text clips to long paragraphs.</p>
+<p>Using the default style sheets, browsers leave generous space between paragraph tags. Remember that if you want to just move text to the next line you also have the <code>&lt;br/</code> tag discussed last chapter.</p>
+<p>Let’s take a look at the paragraph tag in action:</p>
+<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+    &lt;head&gt;
+        &lt;title&gt;Paragraphs&lt;/title&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;h1&gt;About the Instructor&lt;/h1&gt;
+        &lt;p&gt;Mark Lassoff has been teaching computer programming 
+        and digital design since 2001.&lt;/p&gt;
+        &lt;p&gt;He lives in Connecticut where he is redecorating 
+        his condo.  Want to help?&lt;/p&gt;
+    &lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<p>When rendered in the browser the code will appear something like this:<br>
+<img src="https://s3.amazonaws.com/coursewareframework/html5authoring/Screen+Shot+2018-10-03+at+12.35.47+AM.png" alt="P Tag Example"></p>
+<p>Notice the space between the first <code>&lt;p&gt;</code> element and the second? Also, paragraph content is rendered in the default font at the default size unless altered by CSS, which we’ll do later in the course.</p>
+<h3 id="strong-and-emphasis"><code>&lt;strong&gt;</code> and <code>&lt;em&gt;</code>phasis</h3>
+<p>Strong and Emphasis sound like the mean the same thing-- at least from a semantic perspective. Their role is to make text appear <strong>bold</strong> and <em>italicized</em> respectively.</p>
+<p>In previous versions of HTML the tags <code>&lt;b&gt;</code> and <code>&lt;i&gt;</code>  were used for bold and italics. These tags were deprecated however and are no longer part of the current HTML5 language specification. They were replaced by <code>&lt;strong&gt;</code> and <code>&lt;emphasis&gt;</code>.</p>
+<p>All modern browsers still correctly interpret and display display the <code>&lt;b&gt;</code> and <code>&lt;i&gt;</code> tags, however, you can’t guarantee they will continue to be supported in future versions of the browsers.</p>
+<p>These tags are in-line tags in that they don’t create a line break. They can be used within a <code>&lt;p&gt;</code> or other container tag and just applied to the text you want to emphasize.</p>
+<p>Let’s take a look at how the <code>&lt;strong&gt;</code> and <code>&lt;em&gt;</code> tags are used in a web page.</p>
+<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+    &lt;head&gt;
+        &lt;title&gt;Basic Document Structure&lt;/title&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;p&gt;The instructor, &lt;strong&gt;Mark Lassoff&lt;/strong&gt; has been
+         teaching coding and digital design since 2001. The course
+          &lt;em&gt;HTML5 Authoring&lt;/em&gt; is available online.&lt;/p&gt;
+    &lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<p>The output shows the corresponding text bolded and italicized.</p>
+<p><img src="https://s3.amazonaws.com/coursewareframework/html5authoring/Screen+Shot+2018-10-03+at+1.04.34+AM.png" alt="Bold and Emphasis"></p>
+<h3 id="html5-semantic-tags">HTML5 Semantic Tags</h3>
+<p>HTML5 introduces a number of new semantic tags. These tags are designed to better define the content they contain. For most of these new HTML5 tags, their usage is obvious from context. Many have little to no effect on how the output is displayed in the browser, but they do help achieve the goal of more semantic HTML.</p>
+<p>There is no right or wrong way to use these new tags as long as you can justify their usage from a semantic perspective.</p>
+<p>Here’s a list of the most relevant new HTML5 tags:</p>
+<ul>
+<li><code>&lt;article&gt;</code></li>
+<li><code>&lt;aside&gt;</code></li>
+<li><code>&lt;details&gt;</code></li>
+<li><code>&lt;figcaption&gt;</code></li>
+<li><code>&lt;figure&gt;</code></li>
+<li><code>&lt;footer&gt;</code></li>
+<li><code>&lt;header&gt;</code></li>
+<li><code>&lt;main&gt;</code></li>
+<li><code>&lt;mark&gt;</code></li>
+<li><code>&lt;nav&gt;</code></li>
+<li><code>&lt;section&gt;</code></li>
+<li><code>&lt;summary&gt;</code></li>
+<li><code>&lt;time&gt;</code></li>
+</ul>
+<h2 id="debug-this-semantic-html">Debug This: Semantic HTML</h2>
+<p>This code has errors that are preventing it from be displayed correctly and errors that do not effect the display of your document, but, are not proper HTML5.</p>
+<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+    &lt;head&gt;
+        &lt;title&gt;Basic Document Structure&lt;/title&gt;
+    &lt;body&gt;
+        &lt;h1&gt;Yonkers, New York&lt;/hI&gt;
+        &lt;article&gt;
+            &lt;summary&gt;Yonker is a large suburb of New York City that
+             is home to multiple attractions.&lt;/summary&gt;
+            &lt;p&gt;&lt;b&gt;Yonkers&lt;/b&gt; is the fourth most populous city in
+             the U.S. state of New York, behind New York City, 
+             Buffalo, and Rochester. The population of Yonkers was
+             195,976 as enumerated in the 2010 United States Census
+             and is estimated to have increased by 2.5% to 200,807
+             in 2016.[6] It is an inner suburb of New York City,
+             directly to the north of the Bronx and approximately 
+             two miles (3 km) north of the northernmost point in 
+             Manhattan.&lt;/p&gt;
+
+            &lt;p&gt;&lt;b&gt;Yonkers'&lt;/b&gt; downtown is centered on a plaza known
+             as Getty Square, where the municipal government is
+             located. The downtown area also houses significant 
+             local businesses and non-profits, and serves as a major
+             retail hub for Yonkers and the northwest Bronx.&lt;p&gt;
+
+            &lt;p&gt;The city is home to several attractions, including the
+             Untermyer Park and Gardens; Hudson River Museum; Saw 
+             Mill River daylighting, wherein a parking lot was removed
+             to uncover a river; Science Barge; Sherwood House; and 
+             Yonkers Raceway, a harness racing track that has 
+             renovated its grounds and clubhouse and added legalized 
+             video slotmachine gambling in 2006 in a "racino" called 
+             Empire City.&lt;/p&gt;
+        &lt;/article&gt;
+        &lt;foot&gt;Copyright 2018 | Framework Television&lt;/foot&gt;
+    &lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<h2 id="submit-this">Submit This:</h2>
+<p>Using properly formed semantic HTML5, markup the following text new stories so they display in a single document.  Make good choices with the semantic tags you use and ensure that your document displays readably for the user.</p>
+<pre><code>Hackers strike fear in almost half of big businesses
+10/2/2018
+A recent survey from data-tracking company Ensighten found that 46%
+of all enterprise brands are concerned about data breaches after 
+other large companies, such as Facebook and Uber, were hacked. 
+Still, 67% have no marketing security in place, the survey found.
+
+The world’s two largest enterprise blockchain groups join forces
+10/2/2018
+The Enterprise Ethereum Alliance and Hyperledger will combine forces 
+to create an open-source, standards-based cross-platform project to
+bring businesses distributed ledger solutions. "At Hyperledger, we're
+very focused at building communities that build a set of software
+products and many of those touch on and implement Ethereum-related
+standards, and the EEA is focused on driving a community of 
+organizations around a common set of standards and then certifying
+applications against those standards," says EEA Executive 
+Director Ron Resnick.
+
+How industry experts believe AI will affect the workforce
+10/2/2018
+Artificial intelligence is expected to significantly affect the 
+workforce in many sectors, with a 190% increase in the number of 
+LinkedIn profiles listing AI skills on their account profiles since 
+2015, according to LinkedIn data. The majority of experts say AI will
+help make teams more effective and make better decisions, a study 
+from Tata Communications found.
+</code></pre>
+<p>Remember, when submitting the work please use the following naming convention for your file:   <code>HTMLAUTHORING_LastName_SectionNumber.html</code>.  So if your last name is Smith and your submitting section 8, you file name should be <code>HTMLAUTHORING_Smith_8.html</code>.</p>
+<p>For this course visit <a href="https://www.dropbox.com/request/RhW9kBDXtisq2Fsvg3hY">https://www.dropbox.com/request/RhW9kBDXtisq2Fsvg3hY</a> to submit your assignments.</p>
+</div>
+</body>
+
+</html>

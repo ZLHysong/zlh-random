@@ -1,0 +1,186 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JS for App Dev Section 1</title>
+  <link rel="stylesheet" href="https://stackedit.io/style.css" />
+</head>
+
+<body class="stackedit">
+  <div class="stackedit__html"><p><img src="http://frameworktv.com/images/FrameWork%20150%20x%20200.png" alt="Framework Television Logo"></p>
+<h1 id="javascript-for-app-development">JavaScript for App Development</h1>
+<h3 id="by-mark-lassoff-founder-framework-television">By Mark Lassoff, Founder Framework Television</h3>
+<h2 id="section-one">Section One</h2>
+<p>Welcome to the <strong>JavaScript for App Development</strong> program.  I’m really glad that you’re here.</p>
+<p>This is a comprehensive program to prepare you for creating applications using the increasingly popular JavaScript Programming language. While program is suitable for beginners, it will move quickly from the basics in to more applicable topics that are used every day by professional JavaScript developers.</p>
+<p>For each section of the course you’ll be provided with a guide for the content and activities to be completed. When you’ve completed everything you’ll move on to the next section of the course.</p>
+<p>For the 2019 edition of this program, we have updated our code and instruction to be compliant with the ES6 standard. However, for the first few lessons we’ll be sticking to traditional JavaScript as we have found that easier for most new developers to learn.  You will find that, for the most part, ES6 is a superset of the traditional JavaScript language, meaning that everything you learn about “traditional” JavaScript in the first few sections will continue to be applicable even after we engage fully with ES6.</p>
+<h2 id="javascript-specialist-certification">JavaScript Specialist Certification</h2>
+<p>Completing this course will make you eligible to earn the JavaScript Specialist Designation from Framework Television. This certification is designed to represent a fundamental understanding of the JavaScript programming language and it’s applicability to web development and mobile development. There are three steps to certification:</p>
+<ol>
+<li>Complete all of the Sections in the JavaScript for App Development course. You’ll complete a section by reading the section guide (You’re doing that now!), watching the associated videos, and completing the code exercises.</li>
+<li>Submit a correct solution to  the Lab exercise at the end of each chapter. These are critical as learning to code is not a spectator sport!</li>
+<li>Ask an instructor to validate that you are ready for certification.  If you have completed all the sections of the course program you will be certified.</li>
+</ol>
+<p>Upon earning certification, your certificate will be displayed and validated by <a href="http://Credential.net">Credential.net</a>. You’ll be provided with a URL that you can use as your proof of certification.  <a href="http://Credential.net">Credential.net</a> will also allow you to link the certification to your LinkedIn account— And it is highly recommended that you do so.</p>
+<p>*Note:  As of the 2019 edition of our certification program, we are no longer requiring an online exam to earn your certification. We felt that completing the lab exercises was better proof of your programming ability than a multiple choice exam. *</p>
+<h2 id="section-1-goals">Section 1 Goals</h2>
+<p>In this section of the course your goals are:</p>
+<ul>
+<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled=""> To create your first JavaScript program</li>
+<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled=""> To launch the program and see the result in your browser</li>
+<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled=""> To edit and save JavaScript code</li>
+<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled=""> Take Input from the user via Prompt()</li>
+<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled=""> To find small errors and correct them (known as debugging) in<br>
+your JavaScript code.</li>
+</ul>
+<h2 id="watch-this--section-1-video">Watch This:  Section 1 Video</h2>
+<p>As always your course videos are available on YouTube, Roku and other locations. However, only those officially enrolled have access to this course guide, are able to submit assignments, work with the instructor, and get this guide.</p>
+<p>Watch this section video at: <a href="https://www.youtube.com/watch?v=BTEUHJh4kTY">https://www.youtube.com/watch?v=BTEUHJh4kTY</a></p>
+<h2 id="create-and-launch-your-first-javascript-program">Create and Launch Your First JavaScript Program</h2>
+<p>Since we’re going to be using JavaScript mostly in the web context during this course, it makes the most sense to embed our JavaScript code in HTML so it is structured appropriately for the web browser.</p>
+<p>We’re going to use a basic HTML document structure that is common throughout the web.  Every web based application or web site is based on this structure.  Open your text editor and add the following code:</p>
+<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;title&gt;First Javascript&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<p>This is HTML code includes the basic containers of a web based document. The head section is where you’ll find metadata (data about the document) links to external styling scripts and JavaScript files and the document title tag.</p>
+<p>In the body section is where you’ll find much of the content that will be displayed to the user in the browser window.  While we have our basic document structure we haven’t written any JavaScript yet.</p>
+<p>Let’s add some Javascript code.</p>
+<ol>
+<li>Place your cursor above the closing body tag which looks like this: <code>&lt;/body&gt;</code></li>
+<li>At this point we’re going to insert script tags.  Between the opening and closing script tag we’re going to write our actual JavaScript code.  Where your cursor is flashing add the following code:</li>
+</ol>
+<pre><code>&lt;script&gt;
+
+&lt;/script&gt;
+</code></pre>
+<ol start="3">
+<li>Now place your cursor between the opening and closing script tag and type your first line of JavaScript: <code>alert("Hello World from Javascript");</code></li>
+<li>In your text editor, you should now save your document.  Choose a convenient location, like your desktop for now, so you can easily find the file. Chose a filename that ends in the extension “.html” so that your computer associates the file with your web bowers.</li>
+</ol>
+<p>Your complete code file so far should look like this:</p>
+<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;title&gt;First Javascript&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;script&gt;
+        alert("Hello World from Javascript");
+    &lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<p>The alert() function is the actual JavaScript and it follows the same format as most JavaScript commands.  “Alert” is the keyword that tells the browser what to do. In this case “Alert” will create an alert box.</p>
+<p>Between the parentheses is the function’s argument.  It modifies the command.  In this case our argument tells the alert command what to output within the alert box.</p>
+<p>Now we’re ready to launch our program and see what it does in the browser.</p>
+<h2 id="launch-your-javascript-program-and-see-the-result-in-your-browser">Launch Your JavaScript Program and see the Result in Your Browser</h2>
+<p>If you  haven’t fired up your browser, now is the time to do so.  We’re going to launch the JavaScript we just wrote in the browser so you can see the result.</p>
+<p>There are a couple of ways to load our local file in to the browser:</p>
+<ol>
+<li>You can double click the file on your desktop or wherever you stored it.</li>
+<li>You can click the open command from your browsers menu.</li>
+<li>You can drag the file in to the browser window.</li>
+</ol>
+<p>Your result should look similar to the screenshot below.</p>
+<p><img src="https://s3.amazonaws.com/coursewareframework/jsforappdev/1.1.png" alt="The result of executing the JavaScript code in the web browser."></p>
+<p>The alert() command here has worked just as you’d expect, echoing the text inside the alert command argument.</p>
+<p>Once you’re done admiring your work, click “OK” and we can move on.</p>
+<h2 id="edit-and-save-your-javascript-code">Edit and Save Your JavaScript Code</h2>
+<p>Frequently as a new developer you will find yourself editing existing code, not writing brand new code from scratch. To edit code your simply going to open the code in your text editor, make changes, and save the updated file.  When you test your new code in the browser, the result you see will based on the changes that you have made.</p>
+<h3 id="do-this-edit-your-code">Do This: Edit Your Code</h3>
+<p>To practice this process, go ahead and update your code so that instead of outputting “Hello World from JavaScript” it outputs something like “I’m coding now…”  When you’re successful make a few more changes to the code so that the output is different.  <em>Practice the process of editing code, saving it and testing the output.</em></p>
+<h3 id="changing-the-way-we-output-text">Changing the Way we Output Text</h3>
+<p>Consider the following code block.</p>
+<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;title&gt;First getElementById&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;div id="output"&gt;&lt;/div&gt;
+    &lt;script&gt;
+        document.getElementById('output').innerHTML = "&lt;h1&gt;You will become a successful Javascript Programmer.&lt;/h1&gt;";
+    &lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<p>This is obviously more complex than the original code we created. First we have the <code>&lt;div id="output"&gt;&lt;/div&gt;</code> element.  The purpose of this element is to give the JavaScript a place to put the output. (That’s why the id is <em>output</em>.)  The output will be placed inside the div versus in an alert box as before.</p>
+<p>Let’s see what the actual Javascript does:</p>
+<p><em><strong>document.getElementById()</strong></em> This command obtains an element from the HTML using the ID attribute.  Notice the ID attribute in the command matches the attribute in our div.</p>
+<p><em><strong>innerHTML</strong></em> This is a property of the div retrieved.  The property is the value of the HTML inside the div.  It’s blank to start, but we assign the HTML code <code>&lt;h1&gt;You will become a successful JavaScript Programmer.&lt;/h1&gt;</code> This literally places the code in to the element retrieved.  The code is stored in the DOM (Document Object Model) which is a representation of the state of all possible parts of the browser.</p>
+<p>If we execute this little bit of code we get output that (hopefully) you’d expect!<br>
+<img src="https://s3.amazonaws.com/coursewareframework/jsforappdev/1.2.png" alt="Result of code"></p>
+<h2 id="take-input-from-the-user-via-prompt">Take Input from the User Via Prompt()</h2>
+<p>One more (mis)adventure for this first section.  Programs become really useful when they can take input from the user and process it. While this is not Earth-shattering stuff, it does allow your programs to provide a different output based on user input.</p>
+<p>This is done with the <code>prompt()</code> command. The prompt() command will display a pop-up which the user can fill out.  It looks like the screenshot below.<br>
+<img src="https://s3.amazonaws.com/coursewareframework/jsforappdev/prompt.png" alt="The prompt() method in JavaScript"></p>
+<p>Let’s take a look at the code:</p>
+<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+	&lt;title&gt;Input&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+	&lt;div id="output"&gt;&lt;/div&gt;
+	&lt;script&gt;
+	var name = prompt("What is your name?");
+	document.getElementById('output').innerHTML = "Greetings to " + name;
+	&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<p>As you can see the prompt() command is used just like the alert() we looked at earlier. Whatever the user types into the actual prompt stored in a variable called <code>name</code>.  The greeting is inserted into the output div using the name variable which contains the name typed by the user.</p>
+<p>In the next section, we’ll be discussing the types of data that can be stored in JavaScript variables.  This includes integers, floating point numbers and strings.  It is important to remember that whatever input the user provides is stored in the variable as a string (series of characters) and not a number.  This will become important later.</p>
+<h2 id="do-this-debugging">Do This: Debugging</h2>
+<p>This code has several errors.  See if you can debug it and get it working as it should.  When working correctly it should display a story, inserting a nouns, adjectives and verbs as indicated. As is true in the real world, these errors are not always apparent and easy to spot.   Good luck.</p>
+<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+    &lt;head&gt;
+        &lt;title&gt;Mad Lib&lt;/title&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;div id="out"&gt;&lt;/div&gt;
+        &lt;script&gt;
+            var properName = prompt("Enter a proper name");
+            var verb = prompt("Enter a verb (past tense)");
+            var verb2 = prompt("Enter a second verb (past tense)");
+            var adj = prompt("Enter an adjective");
+            var adj2 = prompt("Enter another adjective");
+            
+            var out = "Roses are Red.  Violets are blue. &lt;br/&gt;";
+            out += properName + " left town without wearing a shoe. &lt;br/&gt;";
+            out += properName + " " + verb + ".&lt;br/&gt;";
+            out += "And " + properName + " " + verb2;
+            out += "&lt;br/&gt;But I am " + adj + " " + properName + " thought.&lt;br/&gt;";
+            var out += "And kind of " + adj2   " too!";
+            
+            document.getElementByID('output').innerHTML = out;
+            
+        &lt;/script&gt;
+    &lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<h2 id="submit-this-lab-exercise">Submit This: Lab Exercise</h2>
+<p>Using everything you learned in this lesson, create your own “Mad Libs” style exercise.  Your program must accept as input:</p>
+<ul>
+<li>Two Proper Names</li>
+<li>Three verbs</li>
+<li>Three Adjectives</li>
+</ul>
+<p>Once the user enters the values, the program should create a story or poem similar to the debugging example above.  Please save your file in the following format to insure proper credit:<br>
+<code>LastName_Exercise1.html</code>.</p>
+<p><em>Remember every exercise must be submitted in order for you to earn certification.</em>  Once you’ve completed this exercise, you’re ready to move on to Section II.</p>
+</div>
+</body>
+
+</html>

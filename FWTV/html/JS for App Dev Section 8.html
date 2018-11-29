@@ -1,0 +1,182 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JS for App Dev Section 8</title>
+  <link rel="stylesheet" href="https://stackedit.io/style.css" />
+</head>
+
+<body class="stackedit">
+  <div class="stackedit__html"><p><img src="http://frameworktv.com/images/FrameWork%20150%20x%20200.png" alt="Framework Television Logo"></p>
+<h1 id="javascript-for-app-development">JavaScript for App Development</h1>
+<h3 id="by-mark-lassoff-founder-framework-television">By Mark Lassoff, Founder Framework Television</h3>
+<h2 id="section-eight">Section Eight</h2>
+<h2 id="section-8-goals">Section 8 Goals</h2>
+<p>In this section of the course your goals are:</p>
+<ul>
+<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled=""> Understand Variable Scope</li>
+<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled=""> Use the <code>let</code> Statement to Declare Variables</li>
+<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled=""> Distinguish <code>let</code> from <code>var</code></li>
+<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled=""> Create a Constant with <code>const</code></li>
+<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled=""> Understand Scope as Related to Constants</li>
+<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled=""> Declare a Constant Object</li>
+<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled=""> Declare a Constant Array</li>
+</ul>
+<h2 id="watch-this--section-8-video">Watch This:  Section 8 Video</h2>
+<p>As always your course videos are available on YouTube, Roku and other locations. However, only those officially enrolled have access to this course guide, are able to submit assignments, work with the instructor, and get this guide.</p>
+<p>Watch this section video at:  <a href="https://www.youtube.com/watch?v=Co4KF1CrSfE">https://www.youtube.com/watch?v=Co4KF1CrSfE</a></p>
+<h2 id="variable-scope">Variable Scope</h2>
+<p>Variable Scope determines where variables are visible and accessible as your code executes.</p>
+<p>Limiting scope is usually a good idea to prevent accidental collisions between variables with the same names.  For example, let’s say you used code from a game library.  That game library has a variable called <code>playerScore</code> and your own code has a variable with the same name.</p>
+<p>Can you imagine what would happen if the code in the library and your code were both manipulating the same version of <code>playerScore</code>?   It wouldn’t work well.</p>
+<p>However, assuming variables are properly scoped, this won’t happen and each variable will only be accessible in its own relevant domain.</p>
+<p>Examine the code block below.</p>
+<pre><code>&lt;script&gt;
+    //Global Variables, accessible everywhere
+    var x = 0;
+    var name = "Mark";
+    
+    function myFunction(){
+        //Local Variables only accessible within the function
+        var z = 25;
+        var exxes = 12;
+    
+        //Local Version of x is different from Global x
+        //This is only accessible within the function
+        var x = 19;
+    }
+
+&lt;script&gt;
+</code></pre>
+<p>Fundamentally, there are two variable scopes when you declare variables with <code>var</code>.  Variables declared outside a function are <strong>global</strong> and can be accessed from anywhere within your Javascript.  Variables declared inside a function are <strong>local</strong> and can be accessed only from inside the function.</p>
+<blockquote>
+<p>If you declare variables without the benefit of the <code>var</code> statement (which for reasons beyond explanation you CAN do in JavaScript, these rules don’t apply.  Promise me you won’t try this.</p>
+</blockquote>
+<p>If you declare the same variable within a function and globally you are creating two distinct variables.  <em>This is obviously not a best practice.</em></p>
+<h2 id="let"><code>let</code></h2>
+<p>ES6 has introduced the keyword <code>let</code>. It is now the preferred way to declare your variables.</p>
+<blockquote>
+<p>You may be wondering, why we didn’t start with <code>let</code>.  The reason is that there is a couple decades worth of Javascript out there that predates ES6.  You have to know the old and understand the new. Likely your first jobs in interview will be maintaining code others wrote-- not writing your own code from scratch.</p>
+</blockquote>
+<p>Declaring variables with <code>let</code> is no different than declaring variables with <code>var</code>.</p>
+<pre><code>&lt;script&gt;
+    let name = "Mark Lassoff";
+    let favoriteBand = "Journey";
+    let age = 44.5;
+&lt;/script&gt;
+</code></pre>
+<p>There are some differences in how the JavaScript processor handles your variable behind the scenes.</p>
+<p>First, when you declare your variable with <code>let</code> it is not part of the Window object.  (We haven’t covered the Window object yet, but consider it the object that maintains state and status of the browser and your app).  Technically you could access variables declared with <code>var</code> through the window object like this:  <code>window.yourVariable</code>.</p>
+<p>The second major difference between <code>var</code> and <code>let</code>, is scope.  We’ll talk about that next.</p>
+<h2 id="let-versus-var"><code>let</code> Versus <code>var</code></h2>
+<p>Variables declared with <code>let</code> are block scoped.  What this means, is that the variables are accessible within the block in which they are declared.  Examine the following code:</p>
+<pre><code>&lt;script&gt;
+let y = 100;
+    {
+        let x = 15;
+        
+        //Can reference x here
+        alert(x);
+
+        //Can reference y here
+        alert(y);
+    }
+//x is undefined here.  It was declared in the block
+alert(x);  
+&lt;/script&gt;
+</code></pre>
+<p>In the example above, <code>y</code> is globally scoped so it’s accessible everywhere.  <code>x</code>, however, is block scoped. References made to <code>x</code> outside the block in which its declared will be <code>null</code>.</p>
+<h2 id="creating-constants-with-const">Creating Constants with <code>const</code></h2>
+<p>Every programming language has the ability to create Constants.  Now with ES6, Javascript has joined the rest of the programming world!</p>
+<p>Constants are essentially variables whose value does not change throughout the life of your program execution.  They used to store any type of value that you’ll need to reference but won’t change.  They are declared with the <code>const</code> keyword.</p>
+<pre><code>&lt;script&gt;
+    const APPLES = 12;
+    alert(APPLES);   //12
+
+    APPLES = APPLES + 2; //Not allowed.. Value is constant
+    APPLES = 2; //Not allowed.
+&lt;/script&gt;
+</code></pre>
+<p>By convention, the names of constants are typed in all caps.</p>
+<h2 id="constant-scope">Constant Scope</h2>
+<p>Constants are scoped the same as variables declared with <code>let</code>.   Constants declared with <code>const</code> may be block scoped or globally scoped.</p>
+<blockquote>
+<p>While there is no hard and fast rule, if I declare a constant, I’ll do it in the global scope.  This is a matter of design as I’ll want the constant to substitute for a value in several locations within the code.</p>
+</blockquote>
+<h3 id="do-this--discuss-constants">Do This:  Discuss Constants</h3>
+<p>In the class Slack discussion, give a few examples of values you might declare as constants within a program and why.  Be creative.  For example:  <em>I would declare the size of a game board in a constant, so this way if I wanted to change the size of the game board, I’d only have to do it one place.</em></p>
+<h2 id="const-objects"><code>const</code> Objects</h2>
+<p>While of limited utility, objects can be declared with const in ES6 JavaScript.  You might think that these objects would then be immutable; however, that’s not the case.  The reality is a bit confusing.</p>
+<pre><code>const wine = {type:"Chardonnay", brand:"McGivneys", color:"white",
+ price: 9.99};  
+  
+// In a const Object you can modify a property 
+wine.price = 10.99;  
+  
+// In a const Object you can add a property
+wine.starRating = 5;
+</code></pre>
+<p>Kind of bizarre, right?  (Keep in mind I didn’t create Javascript, I just teach it!)</p>
+<p>The one thing you cannot do in this case is redefine <code>wine</code> in this script.  That would result in an error.</p>
+<p>As I mentioned, I find <code>const</code> objects to be of limited utility.</p>
+<h2 id="const-arrays"><code>const</code> Arrays</h2>
+<p>Like <code>const</code> objects, Arrays can be declared as constants.  Arrays declared as constants cannot be redeclared, but the array itself is mutable.</p>
+<pre><code>const coffee = ["Starbucks", "Peete's", "Dunkin' Donuts", 
+"Caribou Coffee", "Gloria Jeans", "McDonalds"];
+
+//We can modify an array member
+coffee[2] = "Dunkin'";
+
+//We can add to the array
+coffee.push("Coffee Beenery");
+</code></pre>
+<p>In practice, you’ll rarely run into Arrays or Objects declared as constants, but, now you know how to handle them if you do!</p>
+<h2 id="do-this-debugging">Do This: Debugging</h2>
+<p>This code isn’t working.  There’s a problem with scope.  And that’s not the only problem!</p>
+<pre><code>&lt;div id="out"&gt;&lt;/div&gt;
+&lt;script&gt;
+    
+    init();
+    
+    function init()
+    {
+    let factor = 3;
+     const maxValue = 100;
+      const minValue = 0;
+    
+        
+        for(let x = maxValue; x &gt; minValue; x--;)
+        {
+            if(x % factor == 0)
+                {
+                    let output = "";
+                    output += x;
+                    output += "&lt;br/&gt;";
+                }
+        }
+    }
+    
+    document.getElementById("out").innerHTML = "Factors of " + factor 
+    + ":&lt;br/&gt; ";
+    document.getElementById("out").innerHTML += output;
+    
+&lt;/script&gt;
+</code></pre>
+<p>Debug the code and correct the errors, so we get output that looks like the screenshot below.</p>
+<p><img src="https://s3.amazonaws.com/coursewareframework/jsforappdev/Screen+Shot+2018-10-17+at+5.57.04+PM.png" alt="Debug"></p>
+<h2 id="submit-this-lab-exercise">Submit This: Lab Exercise</h2>
+<p>We’re going to redo the calculator exercise from earlier in the course, but this time, please don’t use <code>var</code> to declare your variables.  Use <code>let</code> and, if appropriate, <code>const</code>.  Here are the instructions:</p>
+<p>Create a calculator.  You will prompt the user three times.  For the first prompt, ask the user for the first number to be calculated. For the second prompt, ask the user for the second number to be calculated.  On the third prompt ask for an operation ( + , - , * , / , %).</p>
+<p>Once the user entries to the prompts are stored, perform the operation requested and output the entire equation.  For example if the user enters 4, 5 and + output “9 + 4 = 13”</p>
+<p><strong>One additional caveat:  The results of the calculation must be shown using a function called showResult().  Lab submissions not using this function will be returned for correction.</strong></p>
+<p>Good luck!</p>
+<p>Please save your file in the following format to ensure proper credit:<br>
+<code>LastName_Exercise6</code>.</p>
+<p><em>Remember every exercise must be submitted in order for you to earn certification.</em></p>
+<p>Submit your exercises to:  <a href="https://www.dropbox.com/request/Nl7bSaAe11ZI0PgLRonA">https://www.dropbox.com/request/Nl7bSaAe11ZI0PgLRonA</a></p>
+</div>
+</body>
+
+</html>
