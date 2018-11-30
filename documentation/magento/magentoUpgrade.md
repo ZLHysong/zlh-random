@@ -240,11 +240,11 @@ To enable maintenance mode:
 
     If so, perform the following tasks:
 
-        1. Reset file system ownership and permissions as a user with root privileges.
-        2. Clear the following directories and try again:
-            - <your Magento install dir>/var/cache
-            - <your Magento install dir>/var/page_cache
-            - <your Magento install dir>/generated/code
+    1. Reset file system ownership and permissions as a user with root privileges.
+    2. Clear the following directories and try again:
+        - `<your Magento install dir>/var/cache`
+        - `<your Magento install dir>/var/page_cache`
+        - `<your Magento install dir>/generated/code`
 
 ## [Set pre-installation ownership and permissions](https://devdocs.magento.com/guides/v2.2/install-gde/prereq/file-system-perms.html)
 
