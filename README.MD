@@ -318,3 +318,30 @@ Switched to a new branch 'version2'
 ```
 
 If you do this and make a commit, your version2 branch will be slightly different than your `v2.0.0` tag since it will move forward with your new changes, so do be careful.
+
+## Hangups Config
+
+```
+[Notifications]
+notification-type: none
+[Colors]
+col-palette-colors: 256
+col-active-tab-fg: #0f0
+col-active-tab-bg: #000
+col-inactive-tab-fg: #090
+col-inactive-tab-bg: #000
+col-msg-date-fg: #777
+col-msg-date-bg: #000
+col-msg-sender-fg: #ff0
+col-msg-sender-bg: #000
+col-msg-self-fg: #f00
+col-msg-self-bg: #000
+col-msg-text-fg: #fff
+col-msg-text-bg: #000
+col-msg-text-self-fg: #999
+col-msg-text-self-bg: #000
+col-status-line-fg: #0f0
+col-status-line-bg: #000
+col-tab-background-fg: #090
+col-tab-background-bg: #000
+```
