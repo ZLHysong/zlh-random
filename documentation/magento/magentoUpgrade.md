@@ -1,6 +1,7 @@
 # Magento 2 Upgrade Documentation
 
 > The documentation below assumes you are using the user `shopgc`.  
+> The home directory for `shopgc` is `/home/shopgc`  
 > The magento install directory is (while using `shopgc`) `~/www` or `~/public_html`
 
 ## [Quick Reference](https://devdocs.magento.com/guides/v2.0/comp-mgr/cli/cli-upgrade.html) to updating from the command line
