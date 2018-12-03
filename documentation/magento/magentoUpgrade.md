@@ -1,5 +1,58 @@
 # Magento 2 Upgrade Documentation
 
+> The documentation below assumes you are using the user `shopgc` (whose base folder [type `cd`] is also the Magento install directory).
+
+## Quick Start Guide to Updating from the command line
+
+> The following is a shortened version of the information found below.
+
+```bash
+# Log in to your Magento server as, or switch to, the Magento file system owner.
+# Change to the directory in which you installed the Magento software.
+
+# For example, cd /var/www/html/magento2
+
+# Enter the following commands in the order shown:
+
+composer require <product> <version> --no-update
+composer update
+
+# For example, to upgrade to Magento Open Source version 2.0.13, enter:
+
+composer require magento/product-community-edition 2.0.13 --no-update
+composer update
+
+# If prompted, enter your authentication keys.
+
+# Manually clear var subdirectories:
+
+rm -rf <Magento install dir>/var/cache/*
+rm -rf <Magento install dir>/var/page_cache/*
+rm -rf <Magento install dir>/var/generation/*
+
+# Update the database schema and data:
+
+php bin/magento setup:upgrade
+
+# Put your storefront online (that is, cancel maintenance mode):
+
+php bin/magento maintenance:disable
+
+# Access your storefront.
+
+# The following error might display:
+
+# We're sorry, an error has occurred while generating this email.
+# If so, perform the following tasks:
+
+# Reset file system ownership and permissions as a user with root privileges.
+# Clear the following directories and try again:
+
+<your Magento install dir>/var/cache
+<your Magento install dir>/var/page_cache
+<your Magento install dir>/var/generation
+```
+
 ## [Command-line upgrade](https://devdocs.magento.com/guides/v2.2/comp-mgr/cli/cli-upgrade.html)
 
 You can upgrade Magento from the command line if you installed the software using any of the following:
@@ -240,11 +293,11 @@ To enable maintenance mode:
 
     If so, perform the following tasks:
 
-    1. Reset file system ownership and permissions as a user with root privileges.
-    2. Clear the following directories and try again:
-        - `<your Magento install dir>/var/cache`
-        - `<your Magento install dir>/var/page_cache`
-        - `<your Magento install dir>/generated/code`
+        1. Reset file system ownership and permissions as a user with root privileges.
+        2. Clear the following directories and try again:
+            - <your Magento install dir>/var/cache
+            - <your Magento install dir>/var/page_cache
+            - <your Magento install dir>/generated/code
 
 ## [Set pre-installation ownership and permissions](https://devdocs.magento.com/guides/v2.2/install-gde/prereq/file-system-perms.html)
 
@@ -343,3 +396,44 @@ cp /www/good.htaccess /www/var/.htaccess
 ```
 
 Where `/www/var` is the appropriate folder.
+
+
+also list at the bottom of the document the primary config files for composer, ie composer.json, composer.lock, auth.json as well as var/etc/env.php where the database connection is defined
+
+## Files
+
+### Composer
+
+> I did not include any paths to `*/vendor`, `*/backup`, or `*/dev` as those should only be used by those specific modules and should not affect the rest of the system. 
+
+- Primary Config Files
+    - composer.json: `./public_html/composer.json`
+    - composer.lock: `./public_html/composer.lock`
+    - auth.json: `./.composer/auth.json`
+        - Contains the Username and Password tokens for repo.magento.com
+
+- Other Config Files
+    - composer.json
+        - `./composer.json`
+            - Empty
+            - I believe this file is unused
+        - `./public_html/admin/composer.json`
+            - Main file for `phpmyadmin`
+        - `./public_html/update/composer.json`
+            - Main File for Magento Updater
+        - `./public_html/app/design/frontend/Magento/2018/composer.json`
+            - Main file for the given theme
+        - `./public_html/var/composer.json`
+            - Same as `./public_html/composer.json`
+            - I believe this file is unused
+    - composer.lock
+        - `./public_html/admin/composer.lock`
+        - `./public_html/update/composer.lock`
+    - auth.json
+        - `./public_html/var/composer_home/auth.json`
+
+### Database
+
+- env.php: `./app/etc/env.php`
+    - Contains the database connection information for Magento
+    - Found at
