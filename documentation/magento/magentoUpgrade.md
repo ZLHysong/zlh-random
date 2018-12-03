@@ -3,7 +3,7 @@
 > The documentation below assumes you are using the user `shopgc`.  
 > The magento install directory is (while using `shopgc`) `~/www` or `~/public_html`
 
-## Quick Reference to updating from the command line
+## [Quick Reference](https://devdocs.magento.com/guides/v2.0/comp-mgr/cli/cli-upgrade.html) to updating from the command line
 
 > The following is a shortened version of the information found below.
 
