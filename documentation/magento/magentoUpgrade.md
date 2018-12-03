@@ -51,7 +51,16 @@ php bin/magento setup:di:compile
 # We're sorry, an error has occurred while generating this email.
 # If so, perform the following tasks:
 
-# Reset file system ownership and permissions as a user with root privileges.
+# Reset file system ownership and permissions.
+
+# -------------------- IMPORTANT ---------------------
+# THIS COMMAND MUST BE RAN BY `SHOPGC`, NOT BY `ROOT`.
+# ----------------------------------------------------
+
+find . -type d -exec chmod 770 {} \; &&
+find . -type f -exec chmod 660 {} \; &&
+Chmod u+x bin/magento
+
 # Clear the following directories and try again:
 
 <your Magento install dir>/var/cache
