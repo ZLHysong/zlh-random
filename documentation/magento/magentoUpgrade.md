@@ -438,4 +438,3 @@ also list at the bottom of the document the primary config files for composer, i
 
 - env.php: `./app/etc/env.php`
     - Contains the database connection information for Magento
-    - Found at
