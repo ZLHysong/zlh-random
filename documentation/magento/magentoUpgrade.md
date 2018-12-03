@@ -1,6 +1,6 @@
 # Magento 2 Upgrade Documentation
 
-> The documentation below assumes you are using the user `shopgc` (whose base folder [type `cd`] is also the Magento install directory).
+> The documentation below assumes you are using the user `shopgc` (whose home folder [type `cd ~`] is also the Magento install directory).
 
 ## Quick Reference to updating from the command line
 
