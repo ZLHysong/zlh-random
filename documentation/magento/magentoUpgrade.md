@@ -2,7 +2,7 @@
 
 > The documentation below assumes you are using the user `shopgc` (whose base folder [type `cd`] is also the Magento install directory).
 
-## Quick Start Guide to Updating from the command line
+## Quick Reference to updating from the command line
 
 > The following is a shortened version of the information found below.
 
