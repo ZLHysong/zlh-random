@@ -40,6 +40,10 @@ php bin/magento setup:upgrade
 
 php bin/magento maintenance:disable
 
+# Compile
+
+php bin/magento setup:di:compile
+
 # Access your storefront.
 
 # The following error might display:
@@ -53,6 +57,11 @@ php bin/magento maintenance:disable
 <your Magento install dir>/var/cache
 <your Magento install dir>/var/page_cache
 <your Magento install dir>/var/generation
+
+# Deploy new data
+
+php bin/magento setup:static-content:deploy
+
 ```
 
 ## [Command-line upgrade](https://devdocs.magento.com/guides/v2.2/comp-mgr/cli/cli-upgrade.html)
